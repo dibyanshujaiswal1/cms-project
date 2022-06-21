@@ -49,6 +49,13 @@
                                     <span>{{$message}}</span>
                                     @enderror
                                 </div>
+                                <div class="col-sm-12 mb-3 mb-sm-0">
+                                    <label for="map">Map</label>
+                                    <input type="text" class="form-control" name="map" id="" placeholder="Map"><br>
+                                    @error('map')
+                                    <span>{{$message}}</span>
+                                    @enderror
+                                </div>
                             
 
                             <button class="btn btn-primary btn-user btn-block">

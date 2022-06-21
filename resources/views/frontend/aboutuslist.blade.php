@@ -1,11 +1,12 @@
 @extends('frontend.layouts.master')
 @section('content')
+
 <div class="breadcrumbs">
     <div>
         <div class="breadcrumb-content-inner">
             <div class="gva-breadcrumb-content">
                 <div id="block-gavias-kunco-breadcrumbs" class="text-light block gva-block-breadcrumb block-system block-system-breadcrumb-block no-title">
-                    <div class="breadcrumb-style gva-parallax-background" style="background-color: #F6F6F6;background-image: url(%27/drupal/kunco/themes/gavias_kunco/images/breadcrumb.html);background-position: center center;background-repeat: no-repeat;">
+                    <div class="breadcrumb-style gva-parallax-background" style="background-color: gray; height:10px">
                         <div class="container">
                             <div class="breadcrumb-content-main">
                                 <h2 class="page-title">About Us </h2>

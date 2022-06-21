@@ -56,7 +56,21 @@ class AuthController extends Controller
             'password' => Hash::make($request->new_password)
         ]);
         return redirect()->back()->with("success","Password successfully changed!");
-    }           
+    }    
+    public function editid($id)
+    {
+        $data = User::find($id);
+        return view('Auth.updateprofile', ['data' => $data]);
+    }
+
+    public function updateid(Request $request, $id)
+    {
+        $data = User::find($id);
+        $data->email = $request->email;
+        $data->name = $request->name;
+        $data->save();
+        return  redirect('admin/dashboard');
+    }       
 }
     
     

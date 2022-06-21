@@ -19,6 +19,7 @@ class ContactController extends Controller
             'email' => 'required|email',
             'phone' => 'required',
             'facebook' => 'required',
+            'map'=>'requored',
             
 
 
@@ -30,6 +31,7 @@ class ContactController extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'facebook' =>$request->facebook,
+            'map'=>$request->map,
 
         ]);
         return redirect()->back()->with('message', 'Contact added sucessfully!!');
@@ -51,6 +53,7 @@ class ContactController extends Controller
         $data->email = $request->email;
         $data->phone = $request->phone;
         $data->facebook = $request->facebook;
+        $data->map = $request->map;
         $data->save();
         return  redirect('contact-list');
     }

@@ -42,6 +42,12 @@
                                     <input type="text" class="form-control" name="facebook" id="exampleInputEmail" placeholder="Facebook" value="{{$data->facebook}}">
                                    
                                 </div>
+                                &emsp;
+                                <div class="form-group">
+                                    <label for="map">Map</label>
+                                    <input type="text" class="form-control" name="map" id="exampleInputEmail" placeholder="Map" value="{{$data->Map}}">
+                                   
+                                </div>
                             </div>
 
                             <button class="btn btn-primary btn-user btn-block">

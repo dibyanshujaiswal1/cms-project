@@ -106,16 +106,6 @@
                                                         <span property="schema:name" content="Close-up shot of blue and cream coloured" class="hidden"></span>
                                                         <span property="schema:interactionCount" content="UserComments:0" class="hidden"></span>
 
-                                                        <div class="post-meta">
-                                                            <span class="post-categories">
-                                                                <div class="field field--name-field-post-category field--type-entity-reference field--label-hidden field__item"><a href="taxonomy/term/1.html" hreflang="en">Fashion</a></div>
-                                                            </span> /
-                                                            <span class="post-created"> 21 December 2016 </span> /
-                                                            <span class="post-comment">
-                                                                <a href="close-shot-blue-and-cream-coloured/index.html#comments">0 Comments</a>
-                                                            </span>
-                                                        </div>
-
                                                         <div class="node__meta">
                                                             <article typeof="schema:Person" about="/drupal/kunco/user/1">
                                                             </article>

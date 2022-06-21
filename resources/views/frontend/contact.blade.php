@@ -1,5 +1,59 @@
+@php
+
+use App\Models\Contact;
+$getallcontact=Contact::first();
+@endphp
 @extends('frontend.layouts.master')
 @section('content')
+<div class="breadcrumbs">
+    <div>
+        <div class="breadcrumb-content-inner">
+            <div class="gva-breadcrumb-content">
+                <div id="block-gavias-kunco-breadcrumbs" class="text-light block gva-block-breadcrumb block-system block-system-breadcrumb-block no-title">
+                    <div class="breadcrumb-style gva-parallax-background" style="background-color: gray; height:10px">
+                        <div class="container">
+                            <div class="breadcrumb-content-main">
+                                <h2 class="page-title">Contact Us </h2>
+
+
+                                <div class="">
+                                    <div class="content block-content">
+                                        <div class="breadcrumb-links">
+                                            <div class="content-inner">
+                                                <nav class="breadcrumb " aria-labelledby="system-breadcrumb">
+                                                    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+                                                    <ol>
+
+                                                        <li>
+                                                            <a href="{{url('/')}}">Home</a>
+                                                            <span class=""> - </span>
+
+                                                        </li>
+                                                        <li>
+
+
+                                                        </li>
+                                                        <li>
+                                                            Contact Us
+
+                                                        </li>
+
+                                                        <li></li>
+                                                    </ol>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gva-parallax-inner skrollable skrollable-between" data-bottom-top="top: -80%;" data-top-bottom="top: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div role="main" class="main main-page">
 
     <div class="clearfix"></div>
@@ -25,12 +79,6 @@
         <div class="container">
             <div class="content-main-inner">
                 <div class="row">
-
-
-
-
-
-
                     <div id="page-main-content" class="main-content col-xs-12 col-md-6 sb-r ">
 
                         <div class="main-content-inner">
@@ -62,6 +110,15 @@
                                                             <input placeholder="Your email address*" class="form-control form-email required" data-drupal-selector="edit-mail" type="email" id="edit-mail" name="email" value="" size="60" maxlength="254" required="required" aria-required="true" />
 
                                                             @error('email')
+                                                            <span style="color:red">{{$message}}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="js-form-item form-item js-form-type-email form-item-mail js-form-item-mail form-no-label">
+                                                            <input placeholder="Your email phone number*" class="form-control form-email required" data-drupal-selector="edit-phone" type="text" id="edit-phone" name="phone" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+                                                            @error('phone')
                                                             <span style="color:red">{{$message}}</span>
                                                             @enderror
                                                         </div>
@@ -117,6 +174,26 @@
                     </div>
 
                     <!-- Sidebar Left -->
+                    <div id="page-main-content" class="main-content col-xs-12 col-md-6 sb-r ">
+
+<div class="main-content-inner">
+
+
+    <div class="content-main">
+        <div>
+            <div id="block-gavias-kunco-content" class="block block-system block-system-main-block no-title" style="height: 150px;">
+
+
+           {!!$getallcontact->map!!}
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
                     <!-- End Sidebar Left -->
 
                     <!-- Sidebar Right -->
@@ -126,11 +203,11 @@
                     <!-- End Sidebar Right -->
 
                 </div>
+                
             </div>
         </div>
     </div>
 
-
-
 </div>
+
 @endsection

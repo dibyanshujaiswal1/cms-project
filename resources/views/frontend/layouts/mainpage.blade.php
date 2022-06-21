@@ -183,7 +183,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="gbb-row-wrapper">
-                                                                <div class=" gbb-row  bg-size-cover " style="">
+                                                                <div class=" gbb-row  bg-size-cover ">
                                                                     <div class="bb-inner default">
                                                                         <div class="bb-container container">
                                                                             <div class="row">
@@ -290,7 +290,7 @@
                                                     </div>
 
                                                     <div class="gbb-row-wrapper">
-                                                        <div class=" gbb-row  bg-size-cover " style="">
+                                                        <div class="">
                                                             <div class="bb-inner ">
                                                                 <div class="bb-container container">
                                                                     <div class="row">
@@ -382,13 +382,8 @@
 
                                                                                                                                         <div class="item-image">
                                                                                                                                             <img src="{{asset('backend/img/gallery/'.$galleries->image)}}" style="height:467px; width:700px" alt="Alternative text" typeof="foaf:Image" />
-
-
                                                                                                                                         </div>
-
                                                                                                                                     </div>
-
-
                                                                                                                                 </div>
 
                                                                                                                             </div>
@@ -398,19 +393,8 @@
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                             @endforeach
-
-
                                                                                                         </div>
                                                                                                     </div>
-
-
-
-
-
-
-
-
-
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -425,7 +409,6 @@
                                                         <div style="background-repeat: no-repeat;background-position:center top;" class="gva-parallax-inner skrollable skrollable-between bg-size-cover" data-bottom-top="top: -60%;" data-top-bottom="top: 0%;"></div>
                                                     </div>
                                                 </div>
-
                                                 <div class="gbb-row-wrapper">
                                                     <div class=" gbb-row  bg-size-cover " style="background-color:#f2f2f2">
                                                         <div class="bb-inner default">
@@ -560,13 +543,13 @@
                                                                                                                                 {{$teams->position}}
                                                                                                                             </div>
                                                                                                                             <div class="socials-team">
-                                                                                                                                <a class="gva-social" href="#"><i class="fa fa-facebook"></i></a>
+                                                                                                                                <a class="gva-social" href="#"><i class="fa-brands fa-facebook"></i></a>
 
-                                                                                                                                <a class="gva-social" href="#"><i class="fa fa-linkedin"></i></a>
+                                                                                                                                <a class="gva-social" href="#"><i class="fa-brands fa-instagram"></i></a>
 
-                                                                                                                                <a class="gva-social" href="#"><i class="fa fa-pinterest"></i></a>
+                                                                                                                                <a class="gva-social" href="#"><i class="fa-brands fa-twitter"></i></a>
 
-                                                                                                                                <a class="gva-social" href="#"><i class="fa fa-twitter"></i></a>
+                                                                                                                                <a class="gva-social" href="#"><i class="fa-brands fa-google-plus"></i></a>
 
                                                                                                                             </div>
                                                                                                                         </div>

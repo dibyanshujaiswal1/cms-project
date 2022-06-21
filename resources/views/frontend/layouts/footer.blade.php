@@ -80,6 +80,8 @@ $getallcontact=Contact::first();
                                                 <li><span><a href="{{$getallcontact->facebook}}"><i class="fa-brands fa-facebook"></i> {!! Str::limit($getallcontact->facebook,20)!!}</span> </a></li>
                                                 <li><span><i class="fa fa-mobile-phone"></i>{{$getallcontact->phone}}</span></li>
                                                 <li><a href="{{$getallcontact->email}}"><i class="fa fa-envelope-o"></i>{{$getallcontact->email}}</a> </li>
+
+
                                                
                                             </ul>
                                         </div>
