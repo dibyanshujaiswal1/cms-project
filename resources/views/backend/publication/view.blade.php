@@ -9,8 +9,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">User Message List</h6>
-            
+            <h6 class="m-0 font-weight-bold text-primary">Publication List</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -18,26 +17,30 @@
                     <thead>
                         <tr>
                             <th>SN</th>
-                            <th>name</th>
-                            <th>email</th>
-                            <th>Phone</th>
-                            <th>subject</th>
-                            <th>message</th>
+                            <th>file</th>
+                            <th>title</th>
+                            <th>description</th>
+                            <th>author</th>
+                            <th>refrence</th>
+                            <th>publication type</th>
                             <th>Action </th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        @foreach($getallmessage as $key=>$usermessage)
+                        @foreach($getallpublication as $key=>$publications)
                         <tr>
                             <td>{{$key+1}}</td>
-                            <td>{{$usermessage->name}}</td>
-                            <td>{{$usermessage->email}}</td>
-                            <td>{{$usermessage->phone}}</td>
-                            <td>{{$usermessage->subject}}</td>
-                            <td>{{$usermessage->message}}</td>
+                            <td><iframe src="{{asset('backend/img/publication/'.$publications->file)}}" alt="" width="100" height="100" frameborder="0"></iframe></td>
+                            <td>{{$publications->title}}</td>
+                            <td>{!!Str::limit($publications->description,20)!!}</td>
+                            <td>{{$publications->author}}</td>
+                            <td>{{$publications->refrence}}</td>
+                            <td>{{$publications->publication_type}}</td>
                             <td>
-                                <a href="{{url('delete-message',$usermessage->id)}}" onclick="return confirm('Are You Sure to Delete This Data')" class="btn btn-danger">Delete</a>
+                                <a href="{{route('view.publicationdetails',$publications->id)}}" class="btn btn-success">View</a>
+                                <a href="{{url('updatepublication',$publications->id)}}" class="btn btn-info">Edit</a>
+                                <a href="{{url('delete-publication',$publications->id)}}" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                         @endforeach

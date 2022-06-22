@@ -22,6 +22,7 @@
                             <th>email</th>
                             <th>phone</th>
                             <th>facebook</th>
+                            <th>map</th>
                             <th>Action </th>
                         </tr>
                     </thead>
@@ -34,6 +35,8 @@
                             <td>{{$contact->email}}</td>
                             <td>{{$contact->phone}}</td>
                             <td>{{$contact->facebook}}</td>
+                            <td>{{$contact->map}}</td>
+
                             <td>
                                 
                                 <a href="{{url('updatecontact',$contact->id)}}" class="btn btn-info">Edit</a>

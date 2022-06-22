@@ -11,12 +11,16 @@ use App\Models\Event;
 use App\Models\Gallery;
 use App\Models\Logo;
 use App\Models\News;
+use App\Models\Publication;
 use App\Models\Socialmedia;
 use App\Models\Team;
 use App\Models\Usermessage;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Mail;
 
+// use Mail;
 
 class MainpageController extends Controller
 {
@@ -24,14 +28,12 @@ class MainpageController extends Controller
     public function main(){
         $getallbanner=Banner::get();
         $getallblog=Blog::orderby('id','desc')->where('status','active')->get();
-        $getallnews=News::orderby('id','desc')->get();
-        
+        $getallnews=News::orderby('id','desc')->get();    
         $getallevent=Event::orderby('id','desc')->limit(4)->get();
-    
-
         $getallmember=Team::get();
         $getallgallery=Gallery::get(); 
         $getallnews=News::orderby('id','desc')->get();
+
         
        
 
@@ -76,15 +78,22 @@ class MainpageController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required',
+            'phone' => 'required',
             'subject' => 'required',
             'message' => 'required',
         ]);
-        $var = Usermessage::insert([      
+         Usermessage::insert([      
             'name' => $request->name,
             'email' => $request->email,
+            'phone' => $request->phone,
             'subject' => $request->subject,
             'message' =>$request->message,
         ]);
+        $user=[
+            'name'=>$request->name,
+            'phone'=>$request->phone,
+        ];
+        Mail::to('dibyanshu8055@gmail.com')->send(new \App\Mail\MyTestMail($user));
         return redirect()->back()->with('message', 'Message sents sucessfully!!');
     }
     public function allabout(){
@@ -92,6 +101,28 @@ class MainpageController extends Controller
         $getallmember=Team::get();
         return view('frontend.aboutuslist',compact('getaboutus','getallmember'));
   }
-    
+  public function ourpublication(){
+    $getourpublication=Publication::orderby('id','desc')->where('publication_type','our')->paginate(9);
+    return view('frontend.ourpublication',compact('getourpublication'));
+}
+public function refrencepublication(){
+    $getourpublication=Publication::orderby('id','desc')->where('publication_type','refrence')->paginate(9);
+    return view('frontend.ourpublication',compact('getourpublication'));
+} 
+public function reportpublication(){
+    $getourpublication=Publication::orderby('id','desc')->where('publication_type','reports')->paginate(9);
+    return view('frontend.ourpublication',compact('getourpublication'));
+} 
+public function publicationdetails($id){
+    $publicationdetails=Publication::find($id);
+    return view('frontend.publicationdetails',compact('publicationdetails',));
+} 
+
+public function download($title)
+{
+    // $data = Publication::find($title);
+    $path = public_path('backend/img/publication/'.$title);
+    return Response::download($path);
+}
 
 }

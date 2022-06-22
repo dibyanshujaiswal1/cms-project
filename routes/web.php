@@ -14,6 +14,7 @@ use App\Http\Controllers\AdminController\GalleryController;
 use App\Http\Controllers\AdminController\LogoController;
 use App\Http\Controllers\AdminController\MemberController;
 use App\Http\Controllers\AdminController\NewsController;
+use App\Http\Controllers\AdminController\PublicationController;
 use App\Http\Controllers\AdminController\SocialmediaController;
 use App\Http\Controllers\AdminController\UsermessageController;
 use App\Http\Controllers\AdminController\UsersDataController;
@@ -41,6 +42,9 @@ Route::get('admin/dashboard',[WebpageController::class,'dashboard']);
 //for change password
 Route::get('/changePassword', [AuthController::class, 'showChangePasswordGet'])->name('changePasswordGet');
 Route::post('Cpassword',[AuthController::class,'ChangePassword'])->name('change.password');
+Route::post('update-users/{id}',[AuthController::class,'updateid'])->name('update.user');
+Route::get('updateuserid/{id}',[AuthController::class,'editid']);
+
 
 //for banner
 Route::get('create-banner',[BannerController::class,'createBanner'])->name('banner.create');
@@ -121,6 +125,14 @@ Route::post('update-aboutus/{id}',[AboutUsController::class,'updateaboutus'])->n
 Route::get('updateaboutus/{id}',[AboutUsController::class,'editaboutus']);
 Route::get('viewdetails-aboutus/{id}',[AboutUsController::class,'aboutusdetails'])->name('view.aboutusdetails');
 Route::get('delete-aboutus/{id}',[AboutUsController::class,'deleteaboutus']);
+//for publication
+Route::get('create-publication',[PublicationController::class,'createpublication'])->name('publication.create');
+Route::post('add-publications',[PublicationController::class,'storepublication'])->name('add.publication');
+Route::get('publicationlist',[PublicationController::class,'publicationlist'])->name('get.publication');
+Route::get('publication-details/{id}',[PublicationController::class,'publicationdetails'])->name('view.publicationdetails');
+Route::get('updatepublication/{id}',[PublicationController::class,'editpublication']);
+Route::post('update-publication/{id}',[PublicationController::class,'updatepublication'])->name('update.publication');
+Route::get('delete-publication/{id}',[PublicationController::class,'deletepublication']);
 
 });
 //for frontend user
@@ -135,10 +147,20 @@ Route::get('all-event',[MainpageController::class,'allevent'])->name('all.event'
 Route::get('contact',[MainpageController::class,'contact'])->name('contact.create');
 Route::post('add-contact',[MainpageController::class,'storeusermessage'])->name('add.contact');
 Route::get('all-about',[MainpageController::class,'allabout'])->name('all.about');
+Route::get('view-ourpublication',[MainpageController::class,'ourpublication'])->name('view.ourpublication');
+Route::get('view-refrencepublication',[MainpageController::class,'refrencepublication'])->name('view.refrencepublication');
+Route::get('view-repprtspublication',[MainpageController::class,'reportpublication'])->name('view.reportspublication');
+
+Route::get('view-publicationdetails/{id}',[MainpageController::class,'publicationdetails'])->name('view.publication');
+Route::get('download/{title}',[MainpageController::class,'download'])->name('download.file');
+
+
+
 //for login
 Route::get('login',[AuthController::class,'login']);
 Route::post('store-login',[AuthController::class,'storelogin'])->name('store.login');
 Route::get('logout',[AuthController::class,'logout'])->name('logout.admin');
+
 
 
 

@@ -18,6 +18,7 @@ class CreateUsermessagesTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('subject');
+            $table->string('phone');
             $table->longtext('message');
             $table->timestamps();
         });
