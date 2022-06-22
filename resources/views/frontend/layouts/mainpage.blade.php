@@ -454,7 +454,7 @@
                                                                                                                             </a> </div>
                                                                                                                         <div class="post-meta">
                                                                                                                             <span class="post-categories">
-                                                                                                                                <div class="field field--name-field-post-category field--type-entity-reference field--label-hidden field__item"><a href="taxonomy/term/5.html" hreflang="en"><span class="post-created">{{$blogs->author_name}} </span></a></div>
+                                                                                                                                <div class="field field--name-field-post-category field--type-entity-reference field--label-hidden field__item"><a href="{{route('view.blog',$blogs->id)}}" hreflang="en"><span class="post-created">{{$blogs->author_name}} </span></a></div>
                                                                                                                             </span>
 
                                                                                                                         </div>
@@ -542,16 +542,7 @@
                                                                                                                             <div class="team-job">
                                                                                                                                 {{$teams->position}}
                                                                                                                             </div>
-                                                                                                                            <div class="socials-team">
-                                                                                                                                <a class="gva-social" href="#"><i class="fa-brands fa-facebook"></i></a>
-
-                                                                                                                                <a class="gva-social" href="#"><i class="fa-brands fa-instagram"></i></a>
-
-                                                                                                                                <a class="gva-social" href="#"><i class="fa-brands fa-twitter"></i></a>
-
-                                                                                                                                <a class="gva-social" href="#"><i class="fa-brands fa-google-plus"></i></a>
-
-                                                                                                                            </div>
+                                                                                                                            
                                                                                                                         </div>
                                                                                                                     </div>
                                                                                                                 </div>

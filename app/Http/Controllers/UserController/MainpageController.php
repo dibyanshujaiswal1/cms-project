@@ -18,6 +18,9 @@ use App\Models\Usermessage;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Mail;
+
+// use Mail;
 
 class MainpageController extends Controller
 {
@@ -79,13 +82,18 @@ class MainpageController extends Controller
             'subject' => 'required',
             'message' => 'required',
         ]);
-        $var = Usermessage::insert([      
+         Usermessage::insert([      
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
             'subject' => $request->subject,
             'message' =>$request->message,
         ]);
+        $user=[
+            'name'=>$request->name,
+            'phone'=>$request->phone,
+        ];
+        Mail::to('dibyanshu8055@gmail.com')->send(new \App\Mail\MyTestMail($user));
         return redirect()->back()->with('message', 'Message sents sucessfully!!');
     }
     public function allabout(){

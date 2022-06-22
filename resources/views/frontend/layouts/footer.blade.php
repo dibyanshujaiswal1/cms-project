@@ -141,7 +141,7 @@ $getallcontact=Contact::first();
                             <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
                                
                                 <div class="text-center">
-                                    © Copyright <a href="">dorle</a> 2018. All Rights Reserved.
+                                    © Copyright <a href="">Dhoreli Sewa Samaj</a> 2018. All Rights Reserved.
                                 </div>
                             </div>
                         </div>
