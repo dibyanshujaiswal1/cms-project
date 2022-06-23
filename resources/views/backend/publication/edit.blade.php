@@ -18,7 +18,7 @@
 
                                 <div class="col-sm-12">
                                     <label for="file">Add File</label>
-                                   <input type="file" class="form-control " name="author" id="exampleFirstName" > <iframe src="{{asset('backend/img/publication/'.$data->file)}}" alt="" width="200" height="200"></iframe>
+                                   <input type="file" class="form-control " name="file" id="exampleFirstName" > <iframe src="{{asset('backend/img/publication/'.$data->file)}}" alt="" width="200" height="200"></iframe>
                                 </div>
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label for="title">Publication Title</label>
@@ -37,6 +37,10 @@
                                     <label for="refrence">Reference</label>
                                     <input type="text" class="form-control " name="refrence" id="exampleFirstName" placeholder="Reference" value="{{$data->refrence}}">
                                 </div>
+                                <div class="col-sm-12 mb-3 mb-sm-0">
+                                    <label for="thumbnail">Thumbnail</label>
+                                    <input type="file" class="form-control " id="exampleLastName" name="thumbnail">
+                                    <img src="{{asset('backend/img/publication/thumbnail/'.$data->thumbnail)}}" alt="" width="100" height="100" value="{{$data->thumbnail}}">                                </div>
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label for="status">Publication Type</label>
 

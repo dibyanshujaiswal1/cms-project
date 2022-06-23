@@ -41,8 +41,12 @@
                                     @if(Session::has('error'))
                                     <p style="color:green;text-align:center">{{Session::get('error')}}</p>
                                     @endif
-                                    <form class="user" action="{{route('store.login')}}" method="post">
+                                    @if(Session::has('message'))
+                                    <p style="color:green;text-align:center">{{Session::get('message')}}</p>
+                                    @endif
+                                    <form class="user" action="{{route('store.newpassword')}}" method="post">
                                         @csrf
+                                        <input type="hidden" name="token" value="{{$token}}">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" name="email" placeholder="Enter Email Address...">
                                             @error('email')
@@ -50,8 +54,14 @@
                                             @enderror
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
-                                            @error('password')
+                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="New Password" name="new_password">
+                                            @error('new_password')
+                                            <span style="color:red">{{$message}}</span>
+                                            @enderror
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="conform Password" name="confirm_password">
+                                            @error('confirm_password')
                                             <span style="color:red">{{$message}}</span>
                                             @enderror
                                         </div>
@@ -63,9 +73,9 @@
                                             </div>
                                         </div>
                                         <button class="btn btn-primary btn-user btn-block">
-                                            Login
+                                            Change password
                                         </button>
-                                        <a href="{{url('forgotpassword')}}">Forgot password</a>
+                                      
 
 
 

@@ -94,7 +94,7 @@
 
                                                                         <div class="field field--name-field-image field--type-image field--label-hidden field__item">
                                                                             <div class="item-image">
-                                                                            <iframe src="{{asset('backend/img/publication/'.$publications->file)}}" alt="" width="100%" height="100%" frameborder="0"></iframe>
+                                                                            <img src="{{asset('backend/img/publication/thumbnail/'.$publications->thumbnail)}}" style="height:180px; width:180px">
 
                                                                                 
                                                                             </div>

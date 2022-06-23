@@ -17304,11 +17304,13 @@
         }
         
         .lg-toolbar .lg-close:after {
-            content: "\e070"
+            content: "\f00d";
+            Font-family: FontAwesome
         }
         
         .lg-toolbar .lg-download:after {
-            content: "\e0f2"
+            content: "\f0ab";
+            Font-family: FontAwesome
         }
         
         .lg-sub-html {
@@ -17681,7 +17683,8 @@
         }
         
         #lg-zoom-in:after {
-            content: "\e311"
+            content: "\f00e";
+            font-family: "FontAwesome"
         }
         
         #lg-actual-size {
@@ -17689,7 +17692,8 @@
         }
         
         #lg-actual-size:after {
-            content: "\e033"
+            content: "\f78c";
+            font-family: "FontAwesome"
         }
         
         #lg-zoom-out {
@@ -17698,7 +17702,8 @@
         }
         
         #lg-zoom-out:after {
-            content: "\e312"
+            content: "\f010";
+            font-family: "FontAwesome"
         }
         
         .lg-zoomed #lg-zoom-out {
@@ -17797,7 +17802,8 @@
         }
         
         .lg-fullscreen:after {
-            content: "\e20c"
+            content: "\f066";
+            font-family: FontAwesome
         }
         
         .lg-fullscreen-on .lg-fullscreen:after {
@@ -17923,7 +17929,8 @@
         }
         
         .lg-outer #lg-share:after {
-            content: "\e80d"
+            content: "\f1e0";
+            font-family: 'FontAwesome';
         }
         
         .lg-outer #lg-share-facebook .lg-icon {

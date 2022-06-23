@@ -9,7 +9,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Contact List</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Contact List  &emsp;&emsp;&emsp;<a class="collapse-item" href="{{route('contacts.create')}}">Add Contact</a></h6>
             
         </div>
         <div class="card-body">
