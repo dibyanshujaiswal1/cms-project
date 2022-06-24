@@ -9,7 +9,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Publication List</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Publication List &emsp; &emsp; &emsp;<a class="collapse-item" href="{{route('publication.create')}}">Add Publication</a></h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -22,6 +22,7 @@
                             <th>description</th>
                             <th>author</th>
                             <th>refrence</th>
+                            <th>Thumbnail</th>
                             <th>publication type</th>
                             <th>Action </th>
                         </tr>
@@ -36,6 +37,7 @@
                             <td>{!!Str::limit($publications->description,20)!!}</td>
                             <td>{{$publications->author}}</td>
                             <td>{{$publications->refrence}}</td>
+                            <td><img src="{{asset('backend/img/publication/thumbnail/'.$publications->thumbnail)}}" alt="" width="100" height="100"></td>
                             <td>{{$publications->publication_type}}</td>
                             <td>
                                 <a href="{{route('view.publicationdetails',$publications->id)}}" class="btn btn-success">View</a>

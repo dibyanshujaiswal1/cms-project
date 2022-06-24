@@ -10,6 +10,7 @@ use App\Http\Controllers\AdminController\BannerController;
 use App\Http\Controllers\AdminController\BlogController;
 use App\Http\Controllers\AdminController\ContactController;
 use App\Http\Controllers\AdminController\EventController;
+use App\Http\Controllers\AdminController\ForgotpasswordController;
 use App\Http\Controllers\AdminController\GalleryController;
 use App\Http\Controllers\AdminController\LogoController;
 use App\Http\Controllers\AdminController\MemberController;
@@ -44,6 +45,11 @@ Route::get('/changePassword', [AuthController::class, 'showChangePasswordGet'])-
 Route::post('Cpassword',[AuthController::class,'ChangePassword'])->name('change.password');
 Route::post('update-users/{id}',[AuthController::class,'updateid'])->name('update.user');
 Route::get('updateuserid/{id}',[AuthController::class,'editid']);
+Route::get('forgotpassword',[ForgotpasswordController::class,'forgotpassword']);
+Route::post('submit',[ForgotpasswordController::class,'submit'])->name('submit.forgotpassword');
+Route::get('setpassword/{token}',[ForgotpasswordController::class,'resetpassword'])->name('set.password');
+Route::post('storenewpassword',[ForgotpasswordController::class,'setpassword'])->name('store.newpassword');
+
 
 
 //for banner
@@ -62,6 +68,7 @@ Route::get('updateblog/{id}',[BlogController::class,'editBlog']);
 Route::post('update-blog/{id}',[BlogController::class,'updateBlog'])->name('update.blog');
 Route::get('viewdetails-blogs/{id}',[BlogController::class,'BlogDetails'])->name('view.blogsdetails');
 Route::get('deleteblog/{id}',[BlogController::class,'delete']);
+Route::get('changestatus',[BlogController::class,'changeStatus']);
 //for member
 Route::get('create-member',[MemberController::class,'createmember'])->name('member.create');
 Route::post('add-member',[MemberController::class,'storemember'])->name('add.member');

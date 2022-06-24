@@ -62,6 +62,14 @@
                                     @enderror
                                 </div>
                                 <div class="col-sm-12 mb-3 mb-sm-0">
+                                    <label for="thumbnail">Thumbnail</label>
+
+                                    <input type="file" class="form-control " name="thumbnail" id="exampleFirstName" placeholder="THumbnail">
+                                    @error('thumbnail')
+                                    <span style="color:red">{{$message}}</span>
+                                    @enderror
+                                </div>
+                                <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label for="status">Publication Type</label>
 
                                     <select class="form-control " name="publication_type" id="exampleFirstName" placeholder="Publication Type">

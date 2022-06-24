@@ -21,6 +21,7 @@ class CreatePublicationsTable extends Migration
             $table->string('refrence')->nullable();
             $table->string('author');
             $table->string('publication_type');
+            $table->string('thumbnail');
             $table->timestamps();
         });
     }

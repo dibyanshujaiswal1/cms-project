@@ -23,8 +23,14 @@ class PublicationController extends Controller
         $file = time() . '-' . 'profile' . '.' . $filename->getClientOriginalExtension();
         $destination = public_path('backend/img/publication/');
         $filename->move($destination, $file);
+        
+        $filenames = $request->file('thumbnail');
+        $files = time() . '-' . 'thumbnail' . '.' . $filenames->getClientOriginalExtension();
+        $destinations = public_path('backend/img/publication/thumbnail/');
+        $filenames->move($destinations, $files);
         $var = Publication::insert([
             'file' => $file,
+            'thumbnail' =>$files,
             'title' => $request->title,
             'description' => $request->description,
             'author' => $request->author,
@@ -51,12 +57,21 @@ class PublicationController extends Controller
     {
         $data = Publication::find($id);
         if ($request->file('file')) {
-            $filename = $request->file('file');
-            $file = time() . '-' . 'publication' . '.' . $filename->getClientOriginalExtension();
+            $efilename = $request->file('file');
+            $efile = time() . '-' . 'publication' . '.' . $efilename->getClientOriginalExtension();
             $destination = public_path('backend/img/publication/');
-            $filename->move($destination, $file);
-            $data->file = $file ?  $data->file = $file : '';
+            $efilename->move($destination, $efile);
+            $data->file = $efile ;
+              
         }
+        if($request->file('thumbnail')){
+            $ethumbfilename = $request->file('thumbnail');
+            $ethumbfile = time() . '-' . 'thumnail' . '.' . $ethumbfilename->getClientOriginalExtension();
+            $thumbdestination = public_path('backend/img/publication/thumbnail/');
+            $ethumbfilename->move($thumbdestination, $ethumbfile);
+            $data->thumbnail = $ethumbfile;
+        }
+        
         $data->title = $request->title;
         $data->description = $request->description;
         $data->author = $request->author;
