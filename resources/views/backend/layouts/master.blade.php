@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Doreli Dashboard</title>
+    <title>Dhoreli Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('backend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -19,6 +19,9 @@
     <link href="{{asset('backend/css/sb-admin-2.min.css')}}" rel="stylesheet">
     <!-- <link href="{{asset('backend/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet"> -->
 
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"  /> -->
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -104,7 +107,36 @@
     <!-- Page level custom scripts -->
     <script src="{{asset('backend/js/demo/chart-area-demo.js')}}"></script>
     <script src="{{asset('backend/js/demo/chart-pie-demo.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<!-- <script src="{{asset('backend/vendor/datatables/jquery.dataTables.min.')}}"></script> -->
+<script src="{{asset('backend/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
 
+<!-- Page level custom scripts -->
+<!-- <script src="{{asset('backend/js/demo/datatables-demo.js')}}"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+<script>
+  $(function() {
+    $('.toggle-class').change(function() {
+        alert('Do you want to change your status')
+        var status = $(this).prop('checked') == true ? 1 : 0; 
+        var blogstatus_id = $(this).data('id'); 
+         
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: '/changestatus',
+            data: {'status': status, 'blogstatus_id': blogstatus_id},
+            success: function(data){
+              console.log(data.success)
+            }
+        });
+    })
+  })
+  
+  </script>
 </body>
 
 </html>

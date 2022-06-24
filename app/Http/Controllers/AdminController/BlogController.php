@@ -20,7 +20,6 @@ class BlogController extends Controller
             'title' => 'required',
             'description' => 'required',
             'author_name' => 'required',
-            'status' => 'required',
 
 
         ]);
@@ -35,7 +34,6 @@ class BlogController extends Controller
             'title' => $request->title,
             'description' => $request->description,
             'author_name' => $request->author_name,
-            'status' => $request->status,
 
         ]);
         return redirect()->back()->with('message', 'Blog added sucessfully!!');
@@ -65,7 +63,6 @@ class BlogController extends Controller
         $data->title = $request->title;
         $data->description = $request->description;
         $data->author_name = $request->author_name;
-        $data->status = $request->status;
         $data->save();
         return  redirect('bloglist');
     }
@@ -78,5 +75,13 @@ class BlogController extends Controller
         $data=Blog::find($id);
         $data->delete();
         return redirect('bloglist');
+    }
+    public function changeStatus(Request $request)
+    {
+        $blogs = Blog::find($request->blogstatus_id);
+        $blogs->status = $request->status;
+        $blogs->save();
+        return response()->json(['success'=>'User status change successfully.']);
+
     }
 }

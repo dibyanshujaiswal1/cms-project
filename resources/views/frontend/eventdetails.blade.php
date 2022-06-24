@@ -91,7 +91,7 @@
 
                                                         <div class="field field--name-field-image field--type-image field--label-hidden field__item">
                                                             <div class="item-image">
-                                                                <img property="schema:image" src="{{asset('backend/img/event/'.$eventdetails->image)}}" alt="alt" style="height:600px; width:600px" typeof="foaf:Image" />
+                                                                <img property="schema:image" src="{{asset('backend/img/event/'.$eventdetails->image)}}" alt="alt" style="height:450px; width:700px" typeof="foaf:Image" />
 
                                                             </div>
                                                         </div>

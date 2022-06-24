@@ -45,16 +45,7 @@
                                     <label for="author_name">Author Name</label>
 
                                     <input type="text" class="form-control " name="author_name" id="exampleFirstName" value="{{$data->author_name}}">
-                                </div>
-                                <div class="col-sm-12 mb-3 mb-sm-0">
-                                    <label for="status">status</label>
-
-                                    <select class="form-control " name="status" id="exampleFirstName" placeholder="Status">
-                                        <option value="active">active</option>
-                                        <option value="inactive">inactive</option>
-                                    </select>
-                                </div>
-                            
+                                </div>              
 
                             <button class="btn btn-primary btn-user btn-block">
                                 update Blog

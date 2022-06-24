@@ -94,7 +94,7 @@
 
                                                                         <div class="field field--name-field-image field--type-image field--label-hidden field__item">
                                                                             <div class="item-image">
-                                                                            <img src="{{asset('backend/img/publication/thumbnail/'.$publications->thumbnail)}}" style="height:180px; width:180px">
+                                                                            <img src="{{asset('backend/img/publication/thumbnail/'.$publications->thumbnail)}}" style="height:280px; width:400px">
 
                                                                                 
                                                                             </div>

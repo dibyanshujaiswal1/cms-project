@@ -68,6 +68,7 @@ Route::get('updateblog/{id}',[BlogController::class,'editBlog']);
 Route::post('update-blog/{id}',[BlogController::class,'updateBlog'])->name('update.blog');
 Route::get('viewdetails-blogs/{id}',[BlogController::class,'BlogDetails'])->name('view.blogsdetails');
 Route::get('deleteblog/{id}',[BlogController::class,'delete']);
+Route::get('changestatus',[BlogController::class,'changeStatus']);
 //for member
 Route::get('create-member',[MemberController::class,'createmember'])->name('member.create');
 Route::post('add-member',[MemberController::class,'storemember'])->name('add.member');
