@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Publication extends Model
 {
     use HasFactory;
-    protected $fillable=['file','title','description','refrence','author','publication_type','thumbnail'];
+    protected $fillable=['file','title','description','refrence','author','publication_type'];
 }

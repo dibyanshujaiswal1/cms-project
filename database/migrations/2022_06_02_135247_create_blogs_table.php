@@ -20,7 +20,7 @@ class CreateBlogsTable extends Migration
             $table->string('title');
             $table->longtext('description');
             $table->string('author_name');
-            $table->enum('status',[1,0])->default(1);
+            $table->string('status');
         });
     }
 

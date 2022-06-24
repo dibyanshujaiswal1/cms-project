@@ -95,7 +95,7 @@
 
                                                                         <div class="field field--name-field-image field--type-image field--label-hidden field__item">
                                                                             <div class="item-image">
-                                                                                <a href="server-side-rendering.html"><img property="schema:image" src="{{asset('backend/img/event/'.$events->image)}}" style="height:260px; width:500px" alt="alt" typeof="foaf:Image" />
+                                                                                <a href="server-side-rendering.html"><img property="schema:image" src="{{asset('backend/img/event/'.$events->image)}}" style="height:360px; width:700px" alt="alt" typeof="foaf:Image" />
 
                                                                                 </a>
                                                                             </div>

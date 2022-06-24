@@ -45,16 +45,16 @@ class MainpageController extends Controller
     //
     public function blogdetails($id){
         $blogsdetails=Blog::find($id);
-        $allblogs=Blog::orderby('id','desc')->paginate(4);
+        $allblogs=Blog::orderby('id','desc')->get();
         return view('frontend.blogsdetail',compact('blogsdetails','allblogs'));
     }
     public function allblogs(){
-        $getallbloglist=Blog::orderby('id','desc')->where('status', 1)->paginate(6);
+        $getallbloglist=Blog::orderby('id','desc')->paginate(9);
         return view('frontend.allbloglist',compact('getallbloglist'));
     }
     public function newsdetails($id){
         $newsdetails=News::find($id);
-        $allnews=News::orderby('id','desc')->paginate(4);
+        $allnews=News::orderby('id','desc')->get();
         return view('frontend.newsdetails',compact('newsdetails','allnews'));
     }
     public function allnews(){
@@ -63,7 +63,7 @@ class MainpageController extends Controller
     }
     public function eventdetails($id){
         $eventdetails=Event::find($id);
-        $allevent=Event::orderby('id','desc')->paginate(4);
+        $allevent=Event::orderby('id','desc')->get();
         return view('frontend.eventdetails',compact('eventdetails','allevent'));
     }
     public function allevent(){

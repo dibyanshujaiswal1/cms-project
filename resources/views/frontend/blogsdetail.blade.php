@@ -91,7 +91,7 @@
 
                                                         <div class="field field--name-field-image field--type-image field--label-hidden field__item">
                                                             <div class="item-image">
-                                                                <img property="schema:image" src="{{asset('backend/img/blog/'.$blogsdetails->image)}}" alt="alt" typeof="foaf:Image" style="height:500px; width:700px"/>
+                                                                <img property="schema:image" src="{{asset('backend/img/blog/'.$blogsdetails->image)}}" alt="alt" typeof="foaf:Image" />
 
                                                             </div>
                                                         </div>
@@ -182,7 +182,7 @@
                                                                     <div class="post-block">
                                                                         <div class="post-image">
                                                                             <div class="item-image">
-                                                                                <a href="{{route('view.blog',$blogs->id)}}"><img src="{{asset('backend/img/blog/'.$blogs->image)}}" alt="alt" typeof="Image" style="height:100px; width:200px"/>
+                                                                                <a href="{{route('view.blog',$blogs->id)}}"><img src="{{asset('backend/img/blog/'.$blogs->image)}}" alt="alt" typeof="Image" />
 
                                                                                 </a>
                                                                             </div>
@@ -192,7 +192,7 @@
                                                                             
                                                                                 
                                                                             
-                                                                            <div class="post-title"> <a href="{{route('view.blog',$blogs->id)}}" hreflang="en">{!!str::limit($blogs->description,50)!!}</a> </div>
+                                                                            <div class="post-title"> <a href="{{route('view.blog',$blogs->id)}}" hreflang="en">{!!str::limit($blogs->description,100)!!}</a> </div>
 
                                                                         </div>
                                                                     </div>

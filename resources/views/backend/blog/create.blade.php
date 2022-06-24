@@ -54,7 +54,18 @@
                                     <span style="color:red">{{$message}}</span>
                                     @enderror
                                 </div>
-                            
+                                <div class="col-sm-12 mb-3 mb-sm-0">
+                                    <label for="status">Status</label>
+
+                                    <select class="form-control " name="status" id="exampleFirstName" placeholder="Status">
+                                        <option value="active">active</option>
+                                        <option value="inactive">inactive</option>
+                                    </select>
+                                        @error('status')
+                                        <span style="color:red">{{$message}}</span>
+                                        @enderror
+                                    
+                                </div>
                             </div>
 
                             <button class="btn btn-primary btn-user btn-block">

@@ -36,7 +36,6 @@
                 </div>
                 <div class="card-header py-3">
                     <h4 class="m-0 font-weight-bold text-primary">{{$publicationdetails->publicatiom_type}}</h4>
-                    <h6 class="m-0 font-weight-bold text-primary"><img src="{{asset('backend/img/publication/thumbnail/'.$publicationdetails->thumbnail)}}" alt="" width="500" height="300"></h6>
 
                 </div>
             </div>
