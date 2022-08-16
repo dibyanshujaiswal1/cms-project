@@ -5,20 +5,20 @@
         <div class="breadcrumb-content-inner">
             <div class="gva-breadcrumb-content">
                 <div id="block-gavias-kunco-breadcrumbs" class="text-light block gva-block-breadcrumb block-system block-system-breadcrumb-block no-title">
-                    <div class="breadcrumb-style gva-parallax-background" style="background-color: gray; background-repeat: no-repeat; height:9px">
+                    <div class="breadcrumb-style gva-parallax-background" style="background-repeat: no-repeat; height:9px">
                         <div class="container">
                             <div class="breadcrumb-content-main">
                                 <h2 class="page-title">{{$blogsdetails->title}} </h2>
-                                <div class="">
+                                <div class="mobile">
                                     <div class="content block-content">
                                         <div class="breadcrumb-links">
                                             <div class="content-inner">
                                                 <nav class="breadcrumb " aria-labelledby="system-breadcrumb">
                                                     <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
-                                                    <ol>
+                                                    <ol class="mv">
 
                                                         <li>
-                                                            <a href="{{url('/')}}">Home</a>
+                                                            <a href="{{url('/')}}">गृहपृष्ठ</a>
                                                             <span class=""> - </span>
 
                                                         </li>
@@ -27,7 +27,7 @@
 
                                                         </li>
                                                         <li>
-                                                           Blog Details
+                                                        लेखहरू
 
                                                         </li>
 
@@ -91,7 +91,7 @@
 
                                                         <div class="field field--name-field-image field--type-image field--label-hidden field__item">
                                                             <div class="item-image">
-                                                                <img property="schema:image" src="{{asset('backend/img/blog/'.$blogsdetails->image)}}" alt="alt" typeof="foaf:Image" style="height:500px; width:700px"/>
+                                                                <img property="schema:image" src="{{asset('backend/img/blog/'.$blogsdetails->image)}}" alt="alt" typeof="foaf:Image" style="height:500px; width:700px" class="mobile-view"/>
 
                                                             </div>
                                                         </div>

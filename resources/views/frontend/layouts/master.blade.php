@@ -1,3 +1,7 @@
+@php
+use App\Models\Logo;
+$getlogo=Logo::first();
+@endphp
 <!DOCTYPE html>
 <html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
 
@@ -15,7 +19,10 @@
   <link rel="canonical" href="home-1.html" />
   <link rel="shortlink" href="node/1.html" />
 
-  <title>Doreli</title>
+  <title>Dhoreli</title>
+  @if (!empty($getlogo))
+        <link rel="icon" type="image/png" href="{{asset('backend/img/logo/'.$getlogo->image)}}"/>
+    @endif
   <link rel="stylesheet" media="all" href="{{asset('frontend/css/css_yEQy0DdVKAlXbWom61UYdMIu05Rkiz_OxPyC_uqA5Zw.css')}}" />
   <link rel="stylesheet" media="all" href="{{asset('frontend/css/css6109.css?family=Poppins:400,500,600,700')}}" />
   <link rel="stylesheet" media="all" href="{{asset('frontend/css/cssda6f.css?family=Open+Sans:400,600,700')}}" />

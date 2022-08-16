@@ -20,6 +20,8 @@ use App\Http\Controllers\AdminController\SocialmediaController;
 use App\Http\Controllers\AdminController\UsermessageController;
 use App\Http\Controllers\AdminController\UsersDataController;
 use App\Http\Controllers\UserController\MainpageController;
+use App\Http\Controllers\UserController\MoreAboutUsController;
+use App\Http\Controllers\UserController\RegisterController;
 use App\Models\Socialmedia;
 
 /*
@@ -37,6 +39,11 @@ use App\Models\Socialmedia;
 
 
 
+Route::get('forgotpassword',[ForgotpasswordController::class,'forgotpassword'])->name('admin.fp');
+Route::post('submit',[ForgotpasswordController::class,'submit'])->name('submit.forgotpassword');
+Route::get('setpassword/{token}',[ForgotpasswordController::class,'resetpassword'])->name('set.password');
+Route::post('storenewpassword',[ForgotpasswordController::class,'setpassword'])->name('store.newpassword');
+
 
 Route::middleware(['logincheck'])->group(function(){
 Route::get('admin/dashboard',[WebpageController::class,'dashboard']);
@@ -45,12 +52,6 @@ Route::get('/changePassword', [AuthController::class, 'showChangePasswordGet'])-
 Route::post('Cpassword',[AuthController::class,'ChangePassword'])->name('change.password');
 Route::post('update-users/{id}',[AuthController::class,'updateid'])->name('update.user');
 Route::get('updateuserid/{id}',[AuthController::class,'editid']);
-Route::get('forgotpassword',[ForgotpasswordController::class,'forgotpassword']);
-Route::post('submit',[ForgotpasswordController::class,'submit'])->name('submit.forgotpassword');
-Route::get('setpassword/{token}',[ForgotpasswordController::class,'resetpassword'])->name('set.password');
-Route::post('storenewpassword',[ForgotpasswordController::class,'setpassword'])->name('store.newpassword');
-
-
 
 //for banner
 Route::get('create-banner',[BannerController::class,'createBanner'])->name('banner.create');
@@ -167,6 +168,15 @@ Route::get('download/{title}',[MainpageController::class,'download'])->name('dow
 Route::get('login',[AuthController::class,'login']);
 Route::post('store-login',[AuthController::class,'storelogin'])->name('store.login');
 Route::get('logout',[AuthController::class,'logout'])->name('logout.admin');
+//for register
+Route::get('register-form',[RegisterController::class,'register']);
+Route::post('submit-form',[RegisterController::class,'submitform'])->name('submit.registerform');
+Route::get('verify/{email}',[RegisterController::class,'verify'])->name('verify.mail');
+
+//more about us
+Route::get('team',[MoreAboutUsController::class,'Team'])->name('get.team');
+Route::get('gallery',[MoreAboutUsController::class,'Gallery'])->name('get.gallery');
+
 
 
 

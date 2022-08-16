@@ -15,7 +15,7 @@ class ForgotpasswordController extends Controller
 {
     //
     public function forgotpassword(){
-        return view('Auth/forgotpassword');
+        return view('Auth.forgotpassword');
     }
     public function submit(Request $request){
         $request->validate([

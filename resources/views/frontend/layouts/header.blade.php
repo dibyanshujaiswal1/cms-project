@@ -28,11 +28,11 @@ $getallcontact=Contact::first();
                                             <div class="pull-right text-right">
                                                 @if(!empty($getallmedia->facebook))
                                                 <ul class="inline">
-                                                    <li><a target="_blank" href="{{$getallmedia->facebook}}"><i class="fa-brands fa-facebook"></i></a></li>
-                                                    <li><a target="_blank" href="{{$getallmedia->instagram}}"> <i class="fa-brands fa-instagram"></i></a></li>
-                                                    <li><a target="_blank" href="{{$getallmedia->twitter}}"><i class="fa-brands fa-twitter"></i></a></li>
-                                                    <li><a target="_blank" href="{{$getallmedia->skype}}"><i class="fa-brands fa-skype"></i></a></li>
-                                                    <li><a target="_blank" href="{{$getallmedia->googleplus}}"><i class="fa-brands fa-google-plus"></i></a></li>
+                                                    <li><a target="_blank" href="{{$getallmedia->facebook}}" style="color:white;"><i class="fa-brands fa-facebook"></i></a></li>
+                                                    <li><a target="_blank" href="{{$getallmedia->instagram}}" style="color:white;"> <i class="fa-brands fa-instagram"></i></a></li>
+                                                    <li><a target="_blank" href="{{$getallmedia->twitter}}" style="color:white;"><i class="fa-brands fa-twitter"></i></a></li>
+                                                    <li><a target="_blank" href="{{$getallmedia->skype}}" style="color:white;"><i class="fa-brands fa-skype"></i></a></li>
+                                                    <li><a target="_blank" href="{{$getallmedia->googleplus}}" style="color:white;"><i class="fa-brands fa-google-plus"></i></a></li>
                                                 </ul>
                                                 @endif
                                             </div>
@@ -55,13 +55,12 @@ $getallcontact=Contact::first();
         <div class="container header-content-layout">
             <div class="header-main-inner p-relative">
                 <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12 content-inner">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="branding">
                             <div>
-                                <a href="index.html" title="Home" rel="home" class="site-branding-logo">
+                                <a href="" title="Home" rel="home" class="site-branding-logo">
                                     @if(!empty($getlogo->image))
-                                    <img class="logo-default" src="{{asset('backend/img/logo/'.$getlogo->image)}}" alt="Home" />
-                                    <img class="logo-white hidden" src="{{asset('backend/img/logo/'.$getlogo->image)}}" alt="My Logo" />
+                                    <img class="logo-default img-circle" src="{{asset('backend/img/logo/'.$getlogo->image)}}" alt="Home" />
                                     @endif
                                 </a>
                             </div>
@@ -70,6 +69,11 @@ $getallcontact=Contact::first();
                             <div class="main-menu">
                                 <div class="area-main-menu">
                                     <div class="area-inner">
+                                        <div id="menu-bar" class="menu-bar hidden-lg hidden-md">
+                                            <span class="one"></span>
+                                            <span class="two"></span>
+                                            <span class="three"></span>
+                                        </div>
                                         <div class="gva-offcanvas-mobile">
                                             <div class="close-offcanvas hidden"><i class="gv-icon-8"></i>
                                             </div>
@@ -83,44 +87,53 @@ $getallcontact=Contact::first();
                                                             <div class="gva-navigation">
                                                                 <ul class="clearfix gva_menu gva_menu_main">
                                                                     <li class="menu-item menu-item--expanded">
-                                                                        <a href="{{url('/')}}"> Home
+                                                                        <a href="{{url('/')}}"> गृहपृष्ठ
+
                                                                         </a>
                                                                     </li>
                                                                     <li class="menu-item ">
-                                                                        <a href="{{route('all.about')}}"> About Us </a>
+                                                                        <a href="{{route('all.about')}}"> हाम्रोबारे </a>
                                                                     </li>
                                                                     <li class="menu-item menu-item--expanded ">
-                                                                        <a href=""> Publication<span class="icaret nav-plus fa fa-angle-down"></span> </a>
+                                                                        <a href="">हाम्रोबारे थप<span class="icaret nav-plus fa fa-angle-down"></span> </a>
                                                                         <ul class="menu sub-menu">
                                                                             <li class="menu-item">
-                                                                                <a href="{{route('view.ourpublication')}}">Our Publication</a>
+                                                                                <a href="{{route('get.team')}}">हाम्रो समूह</a>
                                                                             </li>
                                                                             <li class="menu-item">
-                                                                                <a href="{{route('view.refrencepublication')}}">Refrence</a>
+                                                                                <a href="{{route('get.gallery')}}">तस्वीरहरु</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="menu-item menu-item--expanded ">
+                                                                        <a href=""> प्रकाशन<span class="icaret nav-plus fa fa-angle-down"></span> </a>
+                                                                        <ul class="menu sub-menu">
+                                                                            <li class="menu-item">
+                                                                                <a href="{{route('view.ourpublication')}}">हाम्रो प्रकाशन</a>
+                                                                            </li>
+                                                                            <li class="menu-item">
+                                                                                <a href="{{route('view.refrencepublication')}}">सन्दर्भ</a>
                                                                             </li>
                                                                             <li class="menu-item">
                                                                                 <a href="{{route('view.reportspublication')}}">Reports publication</a>
                                                                             </li>
                                                                         </ul>
                                                                     </li>
+
                                                                     <li class="menu-item menu-item--expanded ">
-                                                                        <a href="{{route('all.news')}}"> News
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="menu-item menu-item--expanded ">
-                                                                        <a href="{{route('all.event')}}"> Events
+                                                                        <a href="{{route('all.event')}}"> सूचना र कार्यक्रम
                                                                         </a>
                                                                     </li>
 
                                                                     <li class="menu-item menu-item--expanded ">
-                                                                        <a href="{{route('all.blog')}}"> Blog
+                                                                        <a href="{{route('all.blog')}}"> लेखहरू
                                                                         </a>
                                                                     </li>
                                                                     <li class="menu-item ">
-                                                                        <a href="{{route('contact.create')}}"> Contact </a>
+                                                                        <a href="{{route('contact.create')}}"> सम्पर्क</a>
                                                                     </li>
-                                                                    
-                                                                    
+
+
                                                                 </ul>
                                                             </div>
                                                         </div>

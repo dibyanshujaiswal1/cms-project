@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers\AdminController;
-
 use App\Http\Controllers\Controller;
 use App\Models\Publication;
 use Illuminate\Http\Request;

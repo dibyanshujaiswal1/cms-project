@@ -1,5 +1,4 @@
 @php
-
 use App\Models\Contact;
 $getallcontact=Contact::first();
 @endphp
@@ -10,35 +9,25 @@ $getallcontact=Contact::first();
         <div class="breadcrumb-content-inner">
             <div class="gva-breadcrumb-content">
                 <div id="block-gavias-kunco-breadcrumbs" class="text-light block gva-block-breadcrumb block-system block-system-breadcrumb-block no-title">
-                    <div class="breadcrumb-style gva-parallax-background" style="background-color: gray; height:10px">
+                    <div class="breadcrumb-style gva-parallax-background" style="height:10px">
                         <div class="container">
-                            <div class="breadcrumb-content-main">
-                                <h2 class="page-title">Contact Us </h2>
-
-
-                                <div class="">
+                            <div class="breadcrumb-content-main" style="margin-top:-50px">
+                                <h2 class="page-title">सम्पर्क </h2>
+                                <div class="mobile">
                                     <div class="content block-content">
                                         <div class="breadcrumb-links">
                                             <div class="content-inner">
                                                 <nav class="breadcrumb " aria-labelledby="system-breadcrumb">
                                                     <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
-                                                    <ol>
-
+                                                    <ol class="mv">
                                                         <li>
-                                                            <a href="{{url('/')}}">Home</a>
+                                                            <a href="{{url('/')}}">गृहपृष्ठ</a>
                                                             <span class=""> - </span>
-
                                                         </li>
                                                         <li>
-
-
-                                                        </li>
-                                                        <li>
-                                                            Contact Us
+                                                        सम्पर्क
 
                                                         </li>
-
-                                                        <li></li>
                                                     </ol>
                                                 </nav>
                                             </div>
@@ -47,7 +36,6 @@ $getallcontact=Contact::first();
                                 </div>
                             </div>
                         </div>
-                        <div class="gva-parallax-inner skrollable skrollable-between" data-bottom-top="top: -80%;" data-top-bottom="top: 0%;"></div>
                     </div>
                 </div>
             </div>
@@ -55,26 +43,6 @@ $getallcontact=Contact::first();
     </div>
 </div>
 <div role="main" class="main main-page">
-
-    <div class="clearfix"></div>
-
-
-    <div class="help gav-help-region">
-        <div class="container">
-            <div class="content-inner">
-                <div>
-                    <div data-drupal-messages-fallback class="hidden"></div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="clearfix"></div>
-
-    <div class="clearfix"></div>
-
     <div id="content" class="content content-full">
         <div class="container">
             <div class="content-main-inner">
@@ -161,53 +129,28 @@ $getallcontact=Contact::first();
                                                     </div>
                                                 </div>
                                             </form>
-
                                         </div>
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
-
-                    <!-- Sidebar Left -->
                     <div id="page-main-content" class="main-content col-xs-12 col-md-6 sb-r ">
 
-<div class="main-content-inner">
-
-
-    <div class="content-main">
-        <div>
-            <div id="block-gavias-kunco-content" class="block block-system block-system-main-block no-title" style="height: 150px;">
-
-
-           {!!$getallcontact->map!!}
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-                    <!-- End Sidebar Left -->
-
-                    <!-- Sidebar Right -->
-
-
-
-                    <!-- End Sidebar Right -->
-
+                        <div class="main-content-inner">
+                            <div class="content-main">
+                                <div>
+                                    <div id="block-gavias-kunco-content" class="block block-system block-system-main-block no-title" >
+                                        {!!$getallcontact->map!!}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
             </div>
         </div>
     </div>
-
 </div>
 
 @endsection
