@@ -1,13 +1,12 @@
 @extends('frontend.layouts.master')
 @section('content')
 <div role="main" class="main main-page">
-    <div class="clearfix"></div>
+
     <div class="help gav-help-region">
         <div class="container">
             <div class="content-inner">
                 <div>
                     <div data-drupal-messages-fallback class="hidden"></div>
-
                 </div>
 
             </div>
@@ -147,7 +146,7 @@
                                                                                                                                                 "v_align": "center",
                                                                                                                                                 "h_offset": 20,
                                                                                                                                                 "v_offset": 0
-                                                                                                                                              
+
                                                                                                                                             },
                                                                                                                                             "right": {
                                                                                                                                                 "h_align": "right",
@@ -182,111 +181,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="gbb-row-wrapper">
-                                                                <div class=" gbb-row  bg-size-cover ">
-                                                                    <div class="bb-inner default">
-                                                                        <div class="bb-container container">
-                                                                            <div class="row">
-                                                                                <div class="row-wrapper clearfix">
-                                                                                    <div class="gsc-column col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-                                                                                        <div class="column-inner  bg-size-cover  ">
-                                                                                            <div class="column-content-inner">
-                                                                                                <div class="widget gsc-heading  align-center style-1 text-dark " data-aos="fade-up">
-
-                                                                                                    <h2 class="title">
-                                                                                                        <span>From
-                                                                                                            <strong>Our
-                                                                                                                news</strong>
-                                                                                                            Posts</span>
-                                                                                                    </h2>
-                                                                                                </div>
-                                                                                                <div>
-                                                                                                    <div class="widget block clearfix gsc-block-view  gsc-block-drupal block-view title-align-left  text-dark remove-margin-off" data-aos="fade-up" data-aos-delay="300">
-                                                                                                        <div class="views-element-container">
-                                                                                                            <div class="post-style-stick gva-view js-view-dom-id-7607180cb09dd39783a494a6aaeb67bb1abba7b95a6d461992128aabeeb5a281">
-                                                                                                                <div class="item-list">
-                                                                                                                    <ul>
-                                                                                                                        @foreach($getallnews as $key=> $news)
-                                                                                                                        @if($key==0)
-                                                                                                                        <li class="view-list-item">
-                                                                                                                            <div class="views-field views-field-nothing">
-                                                                                                                                <div class="field-content">
-                                                                                                                                    <div class="post-block">
-
-                                                                                                                                        <div class="post-image">
-
-                                                                                                                                            <div class="item-image">
-
-                                                                                                                                                <a href="{{route('view.newsdetails',$news->id)}}">
-                                                                                                                                                    <img src="{{asset('backend/img/news/'.$news->image)}}" alt="alt" style="height:680px; width:600px" typeof="Image" />
-
-                                                                                                                                                </a>
-                                                                                                                                            </div>
-
-                                                                                                                                        </div>
-                                                                                                                                        <div class="post-content text-left">
-                                                                                                                                            <div class="post-title">
-                                                                                                                                                <a href="{{route('view.newsdetails',$news->id)}}" hreflang="en">
-                                                                                                                                                    {{$news->title}}</a>
-                                                                                                                                            </div>
-                                                                                                                                            <div class="post-meta">
-                                                                                                                                                <span class="post-categories"><a href="" hreflang="en">{{$news->date}}</a></span>
-
-                                                                                                                                            </div>
-                                                                                                                                            <div class="post-body">
-                                                                                                                                                {!! Str::limit($news->short_description,100)!!}
-                                                                                                                                            </div>
-                                                                                                                                        </div>
-
-                                                                                                                                    </div>
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                        </li>
-                                                                                                                        @endif
-                                                                                                                        @if($key>0 and $key<=4) <li class="view-list-item">
-                                                                                                                            <div class="views-field views-field-nothing">
-                                                                                                                                <div class="field-content">
-                                                                                                                                    <div class="post-block">
-                                                                                                                                        <div class="post-image">
-                                                                                                                                            <div class="item-image">
-                                                                                                                                                <a href="{{route('view.newsdetails',$news->id)}}"><img src="{{asset('backend/img/news/'.$news->image)}}" alt="alt" typeof="Image" style="height:133px" />
-
-                                                                                                                                                </a>
-                                                                                                                                            </div>
-                                                                                                                                        </div>
-                                                                                                                                        <div class="post-content text-left">
-                                                                                                                                            <div class="post-title"> <a href="{{route('view.newsdetails',$news->id)}}" hreflang="en">{{$news->title}}</a> </div>
-                                                                                                                                            <div class="post-meta"><span class="post-categories"><a href="" hreflang="en">{{$news->date}}</a></span></div>
-                                                                                                                                            <div class="post-body">{!!str::limit($news->short_description,100)!!}</div>
-
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                            </li>
-                                                                                                                            @endif
-
-                                                                                                                            @endforeach
-                                                                                                                    </ul>
-
-                                                                                                                </div>
-
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
                                                         </div>
-
                                                     </div>
 
                                                     <div class="gbb-row-wrapper">
@@ -311,23 +206,20 @@
                                                                             <div class="gsc-column col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
                                                                                 <div class="column-inner  bg-size-cover  ">
                                                                                     <div class="column-content-inner">
-                                                                                        <div class="widget gsc-box-color clearfix  text-white" style="background-color: #8EC44D;" data-aos="fade-up" data-aos-delay="300">
+                                                                                        <div class="widget gsc-box-color clearfix  text-white" style="background-color: #009247;" data-aos="fade-up" data-aos-delay="300">
                                                                                             <div class="box-content">
-                                                                                                <div class="image"><img src="{{asset('backend/img/event/'.$events->image)}}" style="height:200px" alt="Water Refine" /></div>
-                                                                                                <div class="content-inner">
+                                                                                                <div class="image"><img src="{{asset('backend/img/event/'.$events->image)}}" style="height:200px;width:100%" alt="Water Refine" /></div>
+                                                                                                <div class="">
                                                                                                     <div class="box-title">
                                                                                                         <h4>{{$events->title}}</h4>
                                                                                                     </div>
-                                                                                                    <div class="" style="display:flex;justify-content: space-between;">
-
-                                                                                                        <h6 class="font-weight-bold">{{$events->vanue}}</h6>
-                                                                                                        <h6 class="font-weight-bold">{{\Carbon\Carbon::parse($events->date)->format('d-M-Y')}}</h6>
+                                                                                                    <div class="" style="justify-content: space-between;">
+                                                                                                        <h6 class="font-weight-bold" style="margin-top:-19px">{{$events->vanue}}</h6>
+                                                                                                        <h6 class="font-weight-bold" style="margin-top:-19px">{{\Carbon\Carbon::parse($events->date)->format('d-M-Y')}}</h6>
                                                                                                     </div>
                                                                                                     <div class="box-title">
-                                                                                                        <p>{!!str::limit($events->description,30)!!}</p>
-
+                                                                                                        <p>{!!Str::limit($events->description,20)!!}</p>
                                                                                                     </div>
-
                                                                                                     <div class="action"><a class="link" href="{{route('view.eventdetails',$events->id)}}"><span class="text">Read More</span></a></div>
                                                                                                 </div>
                                                                                             </div>
@@ -381,7 +273,7 @@
                                                                                                                                         </a>
 
                                                                                                                                         <div class="item-image">
-                                                                                                                                            <img src="{{asset('backend/img/gallery/'.$galleries->image)}}" style="height:467px; width:700px" alt="Alternative text" typeof="foaf:Image" />
+                                                                                                                                            <img src="{{asset('backend/img/gallery/'.$galleries->image)}}" style="height:467px; width:100%" alt="Alternative text" typeof="foaf:Image" class="mobile-view" />
                                                                                                                                         </div>
                                                                                                                                     </div>
                                                                                                                                 </div>
@@ -420,66 +312,43 @@
                                                                                 <div class="column-content-inner">
                                                                                     <div class="widget gsc-heading  align-center style-3 text-dark " data-aos="fade-up">
 
-                                                                                        <h2 class="title"><span>From Our Blog Posts</span></h2>
-                                                                                        <div class="title-desc">
-                                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                                                                        </div>
+                                                                                        <h2 class="title" style="margin-top:20px;"><span>From Our Blog Posts</span></h2>
                                                                                     </div>
-                                                                                    <div class="clearfix"></div>
-                                                                                    <div>
-                                                                                        <div class="widget block clearfix gsc-block-view  gsc-block-drupal block-view title-align-left  text-dark remove-margin-off">
-                                                                                            <div class="views-element-container">
-                                                                                                <div class="post-style-grid gva-view js-view-dom-id-4eebdfc539b5a1724de0b085495c84a7c86420378df04674cb06379a42acfa7a">
-                                                                                                    <div class="owl-carousel init-carousel-owl" data-items="3" data-items_lg="3" data-items_md="3" data-items_sm="2" data-items_xs="2" data-loop="1" data-speed="200" data-auto_play="1" data-auto_play_speed="1000" data-auto_play_timeout="3000" data-auto_play_hover="1" data-navigation="1" data-rewind_nav="0" data-pagination="0" data-mouse_drag="1" data-touch_drag="1">
-                                                                                                        @foreach($getallblog as $blogs)
-                                                                                                        <div class="item">
-                                                                                                            <div>
-                                                                                                                <!-- Start Display article for teaser page -->
-
-                                                                                                                <div class="post-block">
-                                                                                                                    <div class="post-image">
-
-                                                                                                                        <div class="field field--name-field-image field--type-image field--label-hidden field__item">
-                                                                                                                            <div class="item-image">
-                                                                                                                                <a href="{{route('view.blog',$blogs->id)}}"><img property="schema:image" src="{{asset('backend/img/blog/'.$blogs->image)}}" style="height:350px" alt="alt" typeof="foaf:Image" />
-
-                                                                                                                                </a>
-                                                                                                                            </div>
-                                                                                                                        </div>
-
-
-                                                                                                                    </div>
-                                                                                                                    <div class="post-content text-left">
-                                                                                                                        <div class="post-title"><a href="{{route('view.blog',$blogs->id)}}" rel="bookmark"><span property="schema:name">{{$blogs->title}}</span>
-                                                                                                                            </a> </div>
-                                                                                                                        <div class="post-meta">
-                                                                                                                            <span class="post-categories">
-                                                                                                                                <div class="field field--name-field-post-category field--type-entity-reference field--label-hidden field__item"><a href="{{route('view.blog',$blogs->id)}}" hreflang="en"><span class="post-created">{{$blogs->author_name}} </span></a></div>
-                                                                                                                            </span>
-
-                                                                                                                        </div>
-                                                                                                                        <div class="post-body">
-
-                                                                                                                            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field__item">{!! Str::limit($blogs->description,100)!!}
-
-                                                                                                                            </div>
-
-
-                                                                                                                        </div>
-
+                                                                                    <div class="widget block clearfix gsc-block-view  gsc-block-drupal block-view title-align-left  text-dark remove-margin-off">
+                                                                                        <div class="views-element-container">
+                                                                                            <div class="post-style-grid gva-view js-view-dom-id-4eebdfc539b5a1724de0b085495c84a7c86420378df04674cb06379a42acfa7a">
+                                                                                                <div class="owl-carousel init-carousel-owl" data-items="3" data-items_lg="3" data-items_md="3" data-items_sm="2" data-items_xs="2" data-loop="1" data-speed="200" data-auto_play="1" data-auto_play_speed="1000" data-auto_play_timeout="3000" data-auto_play_hover="1" data-navigation="1" data-rewind_nav="0" data-pagination="0" data-mouse_drag="1" data-touch_drag="1">
+                                                                                                    @foreach($getallblog as $blogs)
+                                                                                                    <div class="item">
+                                                                                                        <div class="post-block">
+                                                                                                            <div class="post-image">
+                                                                                                                <div class="field field--name-field-image field--type-image field--label-hidden field__item">
+                                                                                                                    <div class="item-image">
+                                                                                                                        <a href="{{route('view.blog',$blogs->id)}}"><img property="schema:image" src="{{asset('backend/img/blog/'.$blogs->image)}}" style="height:300px" alt="alt" typeof="foaf:Image" class="mobile-view" />
+                                                                                                                        </a>
                                                                                                                     </div>
                                                                                                                 </div>
+                                                                                                            </div>
+                                                                                                            <div class="post-content text-left">
+                                                                                                                <div class="post-title"><a href="{{route('view.blog',$blogs->id)}}" rel="bookmark"><span property="schema:name">{{$blogs->title}}</span>
+                                                                                                                    </a> </div>
 
-                                                                                                                <!-- End Display article for teaser page -->
+                                                                                                                <div class="post-body">
+                                                                                                                    <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field__item">{!! Str::limit($blogs->description,80)!!}
+                                                                                                                    </div>
+                                                                                                                </div>
                                                                                                             </div>
                                                                                                         </div>
-                                                                                                        @endforeach
                                                                                                     </div>
+                                                                                                    @endforeach
+
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
+
                                                                                 </div>
+
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -488,7 +357,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
                                                 <div class="gbb-row-wrapper">
                                                     <div class=" gbb-row  bg-size-cover " style="">
                                                         <div class="bb-inner default">
@@ -510,8 +378,7 @@
                                                                                             </p>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <div class="clearfix">
-                                                                                    </div>
+                                                                                    
                                                                                     <div>
                                                                                         <div class="widget block clearfix gsc-block-view  gsc-block-drupal block-view title-align-left  text-dark remove-margin-off" data-aos="fade-up" data-aos-delay="300">
                                                                                             <div class="views-element-container">
@@ -521,47 +388,30 @@
                                                                                                         @foreach($getallmember as $teams)
                                                                                                         <div class="item">
                                                                                                             <div>
-                                                                                                                <!-- Start Display article for teaser page -->
-
                                                                                                                 <div data-history-node-id="59" role="article" about="/drupal/kunco/node/59" class="node node--type-team node--promoted node--view-mode-teaser clearfix">
                                                                                                                     <div class="team-block">
                                                                                                                         <div class="team-image">
                                                                                                                             <div class="field field--name-field-team-image field--type-image field--label-hidden field__item">
                                                                                                                                 <div class="item-image">
-                                                                                                                                    <img src="{{asset('backend/img/members/'.$teams->picture)}}" alt="" typeof="foaf:Image" style="height:300px; width:300px" />
-
+                                                                                                                                    <img src="{{asset('backend/img/members/'.$teams->picture)}}" alt="" typeof="foaf:Image" style="height:250px; width:100%; clip-path: rectangle();" class="mobile-view" />
                                                                                                                                 </div>
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                         <div class="team-content">
                                                                                                                             <div class="team-name">
-                                                                                                                                <a href="node/59.html">
                                                                                                                                     {{$teams->name}}
-                                                                                                                                </a>
                                                                                                                             </div>
                                                                                                                             <div class="team-job">
                                                                                                                                 {{$teams->position}}
                                                                                                                             </div>
-                                                                                                                            
+
                                                                                                                         </div>
                                                                                                                     </div>
                                                                                                                 </div>
-
-                                                                                                                <!-- End Display article for teaser page -->
-
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         @endforeach
-
                                                                                                     </div>
-
-
-
-
-
-
-
-
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -575,64 +425,21 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
-                                                <div class="gbb-row-wrapper">
-                                                    <div class=" gbb-row  bg-size-cover " style="">
-                                                        <div class="bb-inner ">
-                                                            <div class="bb-container container">
-                                                                <div class="row">
-                                                                    <div class="row-wrapper clearfix">
-                                                                        <div class="gsc-column col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-                                                                            <div class="column-inner  bg-size-cover  ">
-                                                                                <div class="column-content-inner">
-                                                                                    <div class="widget gsc-instagram  style-1">
-                                                                                        <div class="widget-heading">
-                                                                                            <div class="title">
-                                                                                                Follow
-                                                                                                us
-                                                                                                on
-                                                                                                Instagram
-                                                                                                <a href="1.html">charitywater</a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="widget-content">
-                                                                                            <div class="owl-carousel init-carousel-owl" data-items="5" data-items_lg="5" data-items_md="5" data-items_sm="4" data-items_xs="2" data-loop="1" data-speed="500" data-auto_play="1" data-auto_play_speed="2000" data-auto_play_timeout="3000" data-auto_play_hover="1" data-navigation="0" data-rewind_nav="0" data-pagination="0" data-mouse_drag="1" data-touch_drag="1">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
+                                        </article>
                                     </div>
-
                                 </div>
-
-                                </article>
-
-
                             </div>
-                        </div>
 
+                        </div>
                     </div>
 
                 </div>
 
             </div>
+
         </div>
     </div>
-
 </div>
-</div>
-
-
 
 </div>
 @endsection

@@ -37,7 +37,7 @@ class AboutUsController extends Controller
     {
         $getallaboutus = About::orderBy('id', 'desc')->get();
         return view('backend.aboutus.view', compact('getallaboutus'));
-    }
+    } 
     public function editaboutus($id)
     {
         $data = About::find($id);

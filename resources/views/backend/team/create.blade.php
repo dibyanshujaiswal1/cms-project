@@ -1,9 +1,6 @@
 @extends('backend.layouts.master')
 @section('content')
-
-
 <div class="container">
-
     <div class="card o-hidden border-0 shadow-lg my-5">
         <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
@@ -28,12 +25,20 @@
                                     <span style="color:red">{{$message}}</span>
                                     @enderror
                                 </div>
-                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <label for="position">Member position</label>
-                                    <input type="text" class="form-control" name="position" id="exampleInputEmail" placeholder="Member Position">
-                                    @error('position')
-                                    <span>{{$message}}</span>
-                                    @enderror
+                                <div class="col-sm-12 mb-3 mb-sm-0">
+                                    <label for="status">Member Position</label>
+
+                                    <select class="form-control " name="position" id="exampleFirstName" placeholder="Select Member Position">
+                                    <option value="">Select Type</option>
+                                        <option value="chairperson">Our Chair Person</option>
+                                        <option value="generalsecurity">General Security</option>
+                                        <option value="lifetimemember">Life Time Member</option>
+                                        <option value="members">Member</option>
+                                    </select>
+                                        @error('position')
+                                        <span style="color:red">{{$message}}</span>
+                                        @enderror
+                                    
                                 </div>
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <label for="position">Contact</label>
@@ -50,8 +55,19 @@
                                     <span>{{$message}}</span>
                                     @enderror
                                 </div>
-                            </div>
+                                <div class="col-sm-12 mb-3 mb-sm-0">
+                                    <label for="status">Member Type</label>
 
+                                    <select class="form-control " name="type" id="exampleFirstName" placeholder="Select Type">
+                                    <option value="">Select Type</option>
+                                        <option value="actiing-member">Acting Committe</option>
+                                        <option value="ex-member">Ex-Committee</option>
+                                    </select>
+                                        @error('type')
+                                        <span style="color:red">{{$message}}</span>
+                                        @enderror
+                                </div>
+                            </div>
                             <button class="btn btn-primary btn-user btn-block">
                                 Add Member
                             </button>
@@ -64,7 +80,5 @@
             </div>
         </div>
     </div>
-
 </div>
-
 @endsection

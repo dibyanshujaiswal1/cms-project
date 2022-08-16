@@ -27,7 +27,7 @@ class MainpageController extends Controller
   
     public function main(){
         $getallbanner=Banner::get();
-        $getallblog=Blog::orderby('id','desc')->where('status','active')->get();
+        $getallblog=Blog::orderby('id','desc')->where('status',1)->get();
         $getallnews=News::orderby('id','desc')->get();    
         $getallevent=Event::orderby('id','desc')->limit(4)->get();
         $getallmember=Team::get();

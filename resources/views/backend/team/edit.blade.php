@@ -29,9 +29,14 @@
 
 
                                 &emsp;
-                                <div class="form-group">
-                                    <label for="position">Member position</label>
-                                    <input type="text" class="form-control " name="position" value="{{$data->position}}" id="exampleInputEmail">
+                                <div class="col-sm-12 mb-3 mb-sm-0">
+                                    <label for="status">Member Position</label>
+                                    <select class="form-control " name="position" id="exampleFirstName" placeholder="Select Member Position" value="{{$data->position}}">
+                                        <option value="chairperson"{{$data->type=="chairperson"?'selected':''}}>Our Chair Person</option>
+                                        <option value="generalsecurity" {{$data->type=="generalsecurity"?'selected':''}}>General Security</option>
+                                        <option value="lifetimemember" {{$data->type=="lifetimemember"?'selected':''}}>Life Time Member</option>
+                                        <option value="members" {{$data->type=="members"?'selected':''}}>Member</option>
+                                    </select>
                                 </div>&emsp;
 
                                 <div class="form-group">
@@ -45,7 +50,17 @@
                                     <input type="file" class="form-control " id="exampleLastName" name="picture">
                                     <img src="{{asset('backend/img/members/'.$data->picture)}}" alt="" width="100" height="100" value="{{$data->picture}}">
                                 </div>
+                                <div class="col-sm-12 mb-3 mb-sm-0">
+                                    <label for="status">Member Type</label>
+
+                                    <select class="form-control " name="type" id="exampleFirstName" placeholder="Select Type" >
+                                        <option value="actiing-member" {{$data->type=="actiing-member"?'selected':''}} >Acting Member</option>
+                                        <option value="ex-member" {{$data->type=="ex-member"?'selected':''}} >Ex-Membere</option>
+                                    </select>
+                                </div>
+
                             </div>
+                           
                     </div>
 
                     <button class="btn btn-primary btn-user btn-block">

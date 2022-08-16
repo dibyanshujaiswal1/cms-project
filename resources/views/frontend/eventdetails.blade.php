@@ -5,7 +5,7 @@
         <div class="breadcrumb-content-inner">
             <div class="gva-breadcrumb-content">
                 <div id="block-gavias-kunco-breadcrumbs" class="text-light block gva-block-breadcrumb block-system block-system-breadcrumb-block no-title">
-                <div class="breadcrumb-style gva-parallax-background" style="background-color: gray; background-repeat: no-repeat; height:9px">
+                <div class="breadcrumb-style gva-parallax-background" style="background-repeat: no-repeat; height:9px">
                         <div class="container">
                             <div class="breadcrumb-content-main">
                                 <h2 class="page-title">{{$eventdetails->title}} </h2>
@@ -15,10 +15,10 @@
                                             <div class="content-inner">
                                                 <nav class="breadcrumb " aria-labelledby="system-breadcrumb">
                                                     <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
-                                                    <ol>
+                                                    <ol class="">
 
                                                         <li>
-                                                            <a href="{{url('/')}}">Home</a>
+                                                            <a href="{{url('/')}}">गृहपृष्ठ</a>
                                                             <span class=""> - </span>
 
                                                         </li>
@@ -91,7 +91,7 @@
 
                                                         <div class="field field--name-field-image field--type-image field--label-hidden field__item">
                                                             <div class="item-image">
-                                                                <img property="schema:image" src="{{asset('backend/img/event/'.$eventdetails->image)}}" alt="alt" style="height:450px; width:700px" typeof="foaf:Image" />
+                                                                <img property="schema:image" src="{{asset('backend/img/event/'.$eventdetails->image)}}" alt="alt" style="height:450px; width:700px" typeof="foaf:Image" class="mobile-view" />
 
                                                             </div>
                                                         </div>

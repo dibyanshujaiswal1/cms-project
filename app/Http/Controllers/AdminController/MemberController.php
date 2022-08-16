@@ -21,6 +21,7 @@ class MemberController extends Controller
             'position' => 'required',
             'contact' => 'required',
             'picture' => 'required',
+            'type'=>'required',
             
 
 
@@ -36,6 +37,7 @@ class MemberController extends Controller
             'name' => $request->name,
             'position' => $request->position,
             'contact' => $request->contact,
+            'type'=>$request->type,
             'picture' => $file,
 
         ]);
@@ -64,6 +66,7 @@ class MemberController extends Controller
         $data->name = $request->name;
         $data->position = $request->position;
         $data->contact = $request->contact;
+        $data->type = $request->type;
         $data->save();
         return  redirect('memberlist');
     }

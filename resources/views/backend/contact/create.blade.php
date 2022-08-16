@@ -1,7 +1,5 @@
 @extends('backend.layouts.master')
 @section('content')
-
-
 <div class="container">
 
     <div class="card o-hidden border-0 shadow-lg my-5">
@@ -56,21 +54,15 @@
                                     <span>{{$message}}</span>
                                     @enderror
                                 </div>
-                            
-
                             <button class="btn btn-primary btn-user btn-block">
                                 Add Contact
                             </button>
-
-
                         </form>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 
 @endsection

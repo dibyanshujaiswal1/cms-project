@@ -40,7 +40,8 @@
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label for="thumbnail">Thumbnail</label>
                                     <input type="file" class="form-control " id="exampleLastName" name="thumbnail">
-                                    <img src="{{asset('backend/img/publication/thumbnail/'.$data->thumbnail)}}" alt="" width="100" height="100" value="{{$data->thumbnail}}">                                </div>
+                                    <img src="{{asset('backend/img/publication/thumbnail/'.$data->thumbnail)}}" alt="" width="100" height="100" value="{{$data->thumbnail}}"> 
+                               </div>
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label for="status">Publication Type</label>
 

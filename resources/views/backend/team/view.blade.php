@@ -23,6 +23,7 @@
                             <th>position</th>
                             <th>contact</th>
                             <th>picture</th>
+                            <th>Type</th>
                             <th>Action </th>
                         </tr>
                     </thead>
@@ -35,6 +36,7 @@
                             <td>{{$teams->position}}</td>
                             <td>{{$teams->contact}}</td>
                             <td> <img src="{{asset('backend/img/members/'.$teams->picture)}}" alt="" width="100" height="100"></td>
+                            <td>{{$teams->type}}</td>
                             <td>
                             <a href="{{url('updatemember',$teams->id)}}" class="btn btn-info">Edit</a>
                             <a href="{{route('view.memberdetails',$teams->id)}}" class="btn btn-success">View</a>

@@ -45,7 +45,7 @@
                                 &emsp;
                                 <div class="form-group">
                                     <label for="map">Map</label>
-                                    <input type="text" class="form-control" name="map" id="exampleInputEmail" placeholder="Map" value="{{$data->Map}}">
+                                    <input type="text" class="form-control" name="map" id="exampleInputEmail" placeholder="Map" value="{{$data->map}}">
                                    
                                 </div>
                             </div>

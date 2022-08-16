@@ -65,7 +65,7 @@
                                         <button class="btn btn-primary btn-user btn-block">
                                             Login
                                         </button>
-                                        <a href="{{url('forgotpassword')}}">Forgot password</a>
+                                        <a href="{{route('admin.fp')}}">Forgot password</a>
 
 
 
