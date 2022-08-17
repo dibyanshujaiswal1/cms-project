@@ -210,17 +210,14 @@
                                                                                             <div class="box-content">
                                                                                                 <div class="image"><img src="{{asset('backend/img/event/'.$events->image)}}" style="height:200px;width:100%" alt="Water Refine" /></div>
                                                                                                 <div class="">
-                                                                                                    <div class="box-title">
+                                                                                                    <div class="box-title" style="margin-top:-13px">
                                                                                                         <h4>{{$events->title}}</h4>
                                                                                                     </div>
                                                                                                     <div class="" style="justify-content: space-between;">
                                                                                                         <h6 class="font-weight-bold" style="margin-top:-19px">{{$events->vanue}}</h6>
                                                                                                         <h6 class="font-weight-bold" style="margin-top:-19px">{{\Carbon\Carbon::parse($events->date)->format('d-M-Y')}}</h6>
                                                                                                     </div>
-                                                                                                    <div class="box-title">
-                                                                                                        <p>{!!Str::limit($events->description,20)!!}</p>
-                                                                                                    </div>
-                                                                                                    <div class="action"><a class="link" href="{{route('view.eventdetails',$events->id)}}"><span class="text">Read More</span></a></div>
+                                                                                                    <div class="action" style="margin-top:-10px"><a class="link" href="{{route('view.eventdetails',$events->id)}}"><span class="text">Read More</span></a></div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>

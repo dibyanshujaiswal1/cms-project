@@ -136,12 +136,13 @@ $getallcontact=Contact::first();
                         </div>
                     </div>
                     <div id="page-main-content" class="main-content col-xs-12 col-md-6 sb-r ">
-
                         <div class="main-content-inner">
                             <div class="content-main">
                                 <div>
                                     <div id="block-gavias-kunco-content" class="block block-system block-system-main-block no-title" >
+                                        @if(!empty($getallcontact->map))
                                         {!!$getallcontact->map!!}
+                                        @endif
                                     </div>
                                 </div>
                             </div>

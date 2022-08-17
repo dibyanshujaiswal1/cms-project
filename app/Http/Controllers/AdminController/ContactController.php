@@ -19,7 +19,7 @@ class ContactController extends Controller
             'email' => 'required|email',
             'phone' => 'required',
             'facebook' => 'required',
-            'map'=>'requored',
+            'map'=> 'required',
             
 
 
