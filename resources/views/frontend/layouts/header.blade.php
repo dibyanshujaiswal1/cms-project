@@ -65,7 +65,7 @@ $getallcontact=Contact::first();
                                 </a>
                             </div>
                         </div>
-                        <div class="header-inner clearfix">
+                        <div class="header-inner clearfix" style="padding-right:44px">
                             <div class="main-menu">
                                 <div class="area-main-menu">
                                     <div class="area-inner">
@@ -74,7 +74,7 @@ $getallcontact=Contact::first();
                                             <span class="two"></span>
                                             <span class="three"></span>
                                         </div>
-                                        <div class="gva-offcanvas-mobile">
+                                        <div class="gva-offcanvas-mobile" style="padding-top:12px">
                                             <div class="close-offcanvas hidden"><i class="gv-icon-8"></i>
                                             </div>
                                             <div class="main-menu-inner">
