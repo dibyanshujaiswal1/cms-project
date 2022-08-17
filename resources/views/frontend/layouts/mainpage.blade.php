@@ -214,8 +214,7 @@
                                                                                                         <h4>{{$events->title}}</h4>
                                                                                                     </div>
                                                                                                     <div class="" style="justify-content: space-between;">
-                                                                                                        <h6 class="font-weight-bold" style="margin-top:-19px">{{$events->vanue}}</h6>
-                                                                                                        <h6 class="font-weight-bold" style="margin-top:-19px">{{\Carbon\Carbon::parse($events->date)->format('d-M-Y')}}</h6>
+                                                                                                        <h6 class="font-weight-bold" style="margin-top:-19px">{{$events->vanue}} {{\Carbon\Carbon::parse($events->date)->format('d-M-Y')}}</h6>
                                                                                                     </div>
                                                                                                     <div class="action" style="margin-top:-10px"><a class="link" href="{{route('view.eventdetails',$events->id)}}"><span class="text">Read More</span></a></div>
                                                                                                 </div>
