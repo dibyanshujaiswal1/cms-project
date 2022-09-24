@@ -1,7 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
 <div role="main" class="main main-page">
-
     <div class="help gav-help-region">
         <div class="container">
             <div class="content-inner">
@@ -32,45 +31,36 @@
                                             </header>
                                             <div class="node__content clearfix">
                                                 <div class="field field--name-field-content-builder field--type-gavias-content-builder field--label-hidden field__item">
-                                                    <div class="gavias-blockbuilder-content">
+                                                    <!-- <div class="gavias-blockbuilder-content">
                                                         <div class="gavias-builder--content">
                                                             <div class="gbb-row-wrapper">
-                                                                <div class=" gbb-row  bg-size-cover " style="">
+                                                                <div class=" gbb-row  bg-size-cover ">
                                                                     <div class="bb-inner remove_padding">
-                                                                        <div class="bb-container container-fw">
+                                                                        <div class="bb-container container-fw">-->
                                                                             <div class="row">
-                                                                                <div class="row-wrapper clearfix">
-                                                                                    <div class="gsc-column col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-                                                                                        <div class="column-inner  bg-size-cover  ">
-                                                                                            <div class="column-content-inner">
-                                                                                                <div class="widget gsc-block-drupal title-align-left  hidden-title-on remove-margin-on text-dark">
-                                                                                                    <div id="block-gavias-kunco-gaviassliderlayersliderwatercharity" class="block block-gavias-sliderlayer block-gavias-sliderlayer-blockgavias-sliderlayer-block____2 no-title">
-
-                                                                                                        <div class="content block-content">
-                                                                                                            <div class="gavias_sliderlayer rev_slider_wrapper fullwidthbanner-container" style="height:800px">
-
+                                                                                <div class="row-wrapper clearfix"> 
+                                                                                    <div class="gsc-column col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                                                                        <div class="column-inner  bg-size-cover" >
+                                                                                            <!-- <div class="column-content-inner" >
+                                                                                                <div class="widget gsc-block-drupal title-align-left  hidden-title-on remove-margin-on text-dark" >
+                                                                                                    <div id="block-gavias-kunco-gaviassliderlayersliderwatercharity" class="block block-gavias-sliderlayer block-gavias-sliderlayer-blockgavias-sliderlayer-block____2 no-title" >
+                                                                                                        <div class="content block-content"> -->
+                                                                                                            <div class="gavias_sliderlayer rev_slider_wrapper fullwidthbanner-container">
                                                                                                                 <div id="ez933" class="rev_slider fullwidthabanner" data-version="5.4.1">
-
                                                                                                                     <ul>
                                                                                                                         @foreach($getallbanner as $banners)
                                                                                                                         <li data-transition="random" data-easein="Power0.easeIn" data-easeout="Power1.easeOut" data-slotamount="7" data-kenburns="off" data-masterspeed="default" data-index="{{$loop->first?'rs-1':''}}">
-                                                                                                                            <img class="rev-slidebg" src="{{asset('backend/img/banner/'.$banners->image)}}" alt="" data-duration="300" data-bgparallax="1" data-scalestart="0" data-scaleend="0" data-kenburns="off" data-bgrepeat="no-repeat" style="background-color:#f2f2f2" data-bgfit="cover" data-bgposition="center top" />
-                                                                                                                            <div class="tp-caption text text-white text-center slide-style-2 " data-x="center" data-y="195" data-start="1205.48" data-transform_idle="o:1;" data-transform_in="x:inherit;y:inherit;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:0;s:600;e:easeOutExpo;" style="z-index:4">
+                                                                                                                            <img class="rev-slidebg" src="{{asset('backend/img/banner/'.$banners->image)}}" alt="" data-duration="300" data-bgparallax="1" data-scalestart="0" data-scaleend="0" data-kenburns="off" data-bgrepeat="no-repeat" style="background-color:#f2f2f2;" data-bgfit="cover" data-bgposition="center top" />
+                                                                                                                            <div class="tp-caption text text-white text-center slide-style-2" data-x="center" data-y="195" data-start="1205.48" data-transform_idle="o:1;" data-transform_in="x:inherit;y:inherit;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:0;s:600;e:easeOutExpo;" style="z-index:4; margin-top: 100px;">
                                                                                                                                 {{$banners->banner_heading}}
                                                                                                                             </div>
-                                                                                                                            <div class="tp-caption text text-white text-center slide-style-3 " data-x="center" data-y="370" data-start="1546.58" data-transform_idle="o:1;" data-transform_in="x:inherit;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:600;e:easeOutExpo;" style="z-index:3">
+                                                                                                                            <div class="tp-caption text text-white text-center slide-style-3 " data-x="center" data-y="370" data-start="1546.58" data-transform_idle="o:1;" data-transform_in="x:inherit;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:600;e:easeOutExpo;" style="z-index:3;margin-top: 50px;">
                                                                                                                                 {{$banners->description}}
                                                                                                                             </div>
                                                                                                                         </li>
                                                                                                                         @endforeach
-
                                                                                                                     </ul>
-
-                                                                                                                    <div class="tp-bannertimer tp-top">
-                                                                                                                    </div>
                                                                                                                 </div>
-
-
                                                                                                             </div>
                                                                                                             <script type="text/javascript">
                                                                                                                 jQuery
@@ -86,7 +76,7 @@
                                                                                                                                 .show()
                                                                                                                                 .revolution({
                                                                                                                                     "delay": 9000,
-                                                                                                                                    "gridheight": 800,
+                                                                                                                                    "gridheight": 520,
                                                                                                                                     "gridwidth": 1170,
                                                                                                                                     "minHeight": 0,
                                                                                                                                     "autoHeight": "off",
@@ -168,8 +158,44 @@
                                                                                                                         }
                                                                                                                     );
                                                                                                             </script>
-                                                                                                        </div>
+                                                                                                        <!-- </div>
 
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div> -->
+                                                                                    </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- </div> -->
+                                                                            <!-- </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> -->
+                                                    <div class="node__content clearfix">
+                                                        <div class="field field--name-field-content-builder field--type-gavias-content-builder field--label-hidden field__item" style="background-color:#f2f2f2">
+                                                            <div class="gavias-blockbuilder-content">
+                                                                <div class="gavias-builder--content">
+                                                                    <div class="gbb-row-wrapper">
+                                                                        <div class=" gbb-row  bg-size-cover " style="padding-top:0px">
+                                                                            <div class="bb-inner remove_padding_top">
+                                                                                <div class="bb-container container">
+                                                                                    <div class="row">
+                                                                                        <div class="row-wrapper clearfix">
+                                                                                            <div class="gsc-column col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding-top: 17px;padding-bottom: 17px;">
+                                                                                                <div class="column-inner  bg-size-cover  ">
+                                                                                                    <div class="column-content-inner">
+                                                                                                        @foreach($getaboutus as $abouts)
+                                                                                                        <div class="gsc-column col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
+                                                                                                            <h2 class="title text-center"><span><strong>{{$abouts->heading}}</strong></span></h2>
+                                                                                                            <div class="title-desc text-center">
+                                                                                                                <p>{!!Str::limit($abouts->description,600)!!} <a href="{{route('all.about')}}">Read More </a></p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        @endforeach
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -183,7 +209,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                     <div class="gbb-row-wrapper">
                                                         <div class="">
                                                             <div class="bb-inner ">
@@ -194,11 +219,8 @@
                                                                                 <div class="column-inner  bg-size-cover  ">
                                                                                     <div class="column-content-inner">
                                                                                         <div class="widget gsc-heading  align-center style-1 text-dark " data-aos="fade-up">
-
                                                                                             <h2 class="title"><span>Events</span></h2>
-
                                                                                         </div>
-                                                                                        <div class="clearfix"></div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -208,7 +230,7 @@
                                                                                     <div class="column-content-inner">
                                                                                         <div class="widget gsc-box-color clearfix  text-white" style="background-color: #009247;" data-aos="fade-up" data-aos-delay="300">
                                                                                             <div class="box-content">
-                                                                                                <div class="image"><img src="{{asset('backend/img/event/'.$events->image)}}" style="height:200px;width:100%" alt="Water Refine" /></div>
+                                                                                                <div class="image"><img src="{{asset('backend/img/event/'.$events->image)}}"alt="Water Refine" /></div>
                                                                                                 <div class="">
                                                                                                     <div class="box-title" style="margin-top:-13px">
                                                                                                         <h4>{{$events->title}}</h4>
@@ -224,6 +246,63 @@
                                                                                 </div>
                                                                             </div>
                                                                             @endforeach
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="content" class="content content-full">
+                                                    <div class="container">
+                                                        <div class="content-main-inner">
+                                                            <div class="row">
+                                                                <div id="page-main-content" class="main-content col-md-12 col-xs-12">
+                                                                    <div class="main-content-inner">
+                                                                        <div class="widget gsc-heading  align-center style-1 text-dark " data-aos="fade-up">
+                                                                            <h2 class="title"><span>Publication</span></h2>
+                                                                        </div>
+                                                                        <div class="content-main">
+                                                                            <div>
+                                                                                <div id="block-gavias-kunco-content" class="block block-system block-system-main-block no-title" style="margin-top: 43px;">
+                                                                                    <div class="content block-content">
+                                                                                        <div class="views-element-container">
+                                                                                            <div class="post-style-grid gva-view view-page js-view-dom-id-dd2c2acba784d5f58b6a4de52a852ef2d3e5e265e5a55929193a3dda505c7ed1">
+                                                                                                <div class="views-view-grid horizontal cols-3 clearfix">
+                                                                                                    <div class="views-row row clearfix row-1">
+                                                                                                        @foreach($getourpublication->take(3) as $publications)
+                                                                                                        <div class="views-col col-1 col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                                                            <div class="post-block">
+                                                                                                                <div class="post-image">
+                                                                                                                    <div class="field field--name-field-image field--type-image field--label-hidden field__item">
+                                                                                                                        <div class="item-image">
+                                                                                                                            <img src="{{asset('backend/img/publication/thumbnail/'.$publications->thumbnail)}}" class="mobile-view">
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="post-content text-left">
+                                                                                                                    <div class="post-title"> <a href="{{route('view.publication',$publications->id)}}" rel="bookmark"><span property="schema:name">{{$publications->title}}</span>
+                                                                                                                        </a> </div>
+                                                                                                                    <div class="post-meta" style="margin-top:5px">
+                                                                                                                        <span class="post-categories">
+                                                                                                                            <div class="field field--name-field-post-category field--type-entity-reference field--label-hidden field__item"><a href="{{route('view.publication',$publications->id)}}" hreflang="en">{{$publications->author}}</a></div>
+                                                                                                                        </span>
+                                                                                                                    </div>
+                                                                                                                    <div class="post-body">
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <!-- End Display article for teaser page -->
+
+                                                                                                        </div>
+                                                                                                        @endforeach
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -320,17 +399,17 @@
                                                                                                             <div class="post-image">
                                                                                                                 <div class="field field--name-field-image field--type-image field--label-hidden field__item">
                                                                                                                     <div class="item-image">
-                                                                                                                        <a href="{{route('view.blog',$blogs->id)}}"><img property="schema:image" src="{{asset('backend/img/blog/'.$blogs->image)}}" style="height:300px" alt="alt" typeof="foaf:Image" class="mobile-view" />
+                                                                                                                        <a href="{{route('view.blog',$blogs->id)}}"><img property="schema:image" src="{{asset('backend/img/blog/'.$blogs->image)}}" alt="alt" typeof="foaf:Image" class="mobile-view" />
                                                                                                                         </a>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                             <div class="post-content text-left">
                                                                                                                 <div class="post-title"><a href="{{route('view.blog',$blogs->id)}}" rel="bookmark"><span property="schema:name">{{$blogs->title}}</span>
-                                                                                                                    </a> </div>
-
+                                                                                                                    </a> 
+                                                                                                                </div>
                                                                                                                 <div class="post-body">
-                                                                                                                    <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field__item">{!! Str::limit($blogs->description,80)!!}
+                                                                                                                    <div property="schema:text" class="">{!!Str::limit($blogs->description,80)!!}
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
@@ -374,7 +453,7 @@
                                                                                             </p>
                                                                                         </div>
                                                                                     </div>
-                                                                                    
+
                                                                                     <div>
                                                                                         <div class="widget block clearfix gsc-block-view  gsc-block-drupal block-view title-align-left  text-dark remove-margin-off" data-aos="fade-up" data-aos-delay="300">
                                                                                             <div class="views-element-container">
@@ -389,13 +468,13 @@
                                                                                                                         <div class="team-image">
                                                                                                                             <div class="field field--name-field-team-image field--type-image field--label-hidden field__item">
                                                                                                                                 <div class="item-image">
-                                                                                                                                    <img src="{{asset('backend/img/members/'.$teams->picture)}}" alt="" typeof="foaf:Image" style="height:250px; width:100%; clip-path: rectangle();" class="mobile-view" />
+                                                                                                                                    <img src="{{asset('backend/img/members/'.$teams->picture)}}" alt="" typeof="foaf:Image" style="clip-path: rectangle();" class="mobile-view" />
                                                                                                                                 </div>
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                         <div class="team-content">
                                                                                                                             <div class="team-name">
-                                                                                                                                    {{$teams->name}}
+                                                                                                                                {{$teams->name}}
                                                                                                                             </div>
                                                                                                                             <div class="team-job">
                                                                                                                                 {{$teams->position}}

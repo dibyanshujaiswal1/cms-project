@@ -13,6 +13,9 @@
                             <h1 class="h4 text-gray-900 mb-4">Update Events</h1>
 
                         </div>
+                        @if(Session::has('message'))
+                        <p style="color:green;text-align:center">{{Session::get('message')}}</p>
+                        @endif
                         <form class="user" action="{{route('update.event',$data->id)}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group row">
@@ -34,7 +37,7 @@
                                 </div>
                                 <br>
                                 <div class="col-sm-12">
-                                    <label for="image">Image</label>
+                                    <label for="image">Image <span class="text-danger">use 370*280 image size</span></label>
 
                                     <input type="file" class="form-control " id="exampleLastName" name="image" >
                                     <img src="{{asset('backend/img/event/'.$data->image)}}" alt="" width="100" height="100" value="{{$data->image}}">

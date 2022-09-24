@@ -120,7 +120,7 @@
                                                         <div class="node__content clearfix">
 
                                                             <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
-                                                                <p>{!! Str::limit($blogsdetails->description,)!!}.</p>
+                                                                <p>{!!$blogsdetails->description!!}</p>
 
                                                                                                                   </div>
                                                             <ul class="links inline">
@@ -192,7 +192,7 @@
                                                                             
                                                                                 
                                                                             
-                                                                            <div class="post-title"> <a href="{{route('view.blog',$blogs->id)}}" hreflang="en">{!!str::limit($blogs->description,50)!!}</a> </div>
+                                                                            <div class="post-title"> <a href="{{route('view.blog',$blogs->id)}}" hreflang="en">{!!Str::limit($blogs->description,50)!!}</a> </div>
 
                                                                         </div>
                                                                     </div>

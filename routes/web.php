@@ -78,10 +78,12 @@ Route::get('updatemember/{id}',[MemberController::class,'editmember']);
 Route::post('update-member/{id}',[MemberController::class,'updatemember'])->name('update.member');
 Route::get('viewdetails-member/{id}',[MemberController::class,'MemberDetails'])->name('view.memberdetails');
 Route::get('deletemember/{id}',[MemberController::class,'deletemember']);
+Route::post('team-recorder',[MemberController::class,'TeamRecorder'])->name('team.reorder');
+
 //for gallery
 Route::get('create-gallery',[GalleryController::class,'creategallery'])->name('gallery.create');
 Route::post('add-gallery',[GalleryController::class,'storegallery'])->name('add.gallery');
-Route::get('gallerylist',[GalleryController::class,'gallarylist'])->name('get.gallery');
+Route::get('gallerylist',[GalleryController::class,'gallarylist'])->name('view.gallery');
 Route::get('updategallery/{id}',[GalleryController::class,'editgallery']);
 Route::post('update-gallery/{id}',[GalleryController::class,'updategallery'])->name('update.gallery');
 Route::get('deletegallery/{id}',[GalleryController::class,'deletegallery']);

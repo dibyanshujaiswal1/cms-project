@@ -27217,7 +27217,7 @@
                      }
                      
                      header .site-branding-logo {
-                         padding: 15px 0;
+                         padding: 2px 0;
                          display: inline-block;
                          max-height: 95px;
                          height: auto;
@@ -27396,7 +27396,7 @@
                      
                      @media (max-width:991px) {
                          header.header-v1 .site-branding-logo {
-                             padding-top: 15px;
+                             padding-top: 2px;
                          }
                      }
                      
@@ -27423,6 +27423,9 @@
                          header.header-v1 .header-main-inner .header-inner {
                              padding-left: 200px;
                          }
+                         .gva-offcanvas-mobile {
+                             padding-right: 140px!important;
+                         }
                      }
                      
                      header.header-v1 .header-main-inner .gva-offcanvas-mobile {
@@ -27435,7 +27438,7 @@
                      }
                      
                      header.header-v1 .header-main.has-link-donate .gva-offcanvas-mobile {
-                         padding-right: 145px;
+                         padding-right: 288px;
                      }
                      
                      @media (max-width:991px) {

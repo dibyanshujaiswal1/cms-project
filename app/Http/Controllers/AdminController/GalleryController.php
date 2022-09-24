@@ -37,7 +37,7 @@ class GalleryController extends Controller
     public function gallarylist()
     {
         $getallgallery = Gallery::orderby('id', 'desc')->get();
-
+        
         return view('backend.gallery.view', compact('getallgallery'));
     }
     public function editgallery($id)

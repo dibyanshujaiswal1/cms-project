@@ -15,10 +15,11 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table id="basic-datatable" class="table dt-responsive nowrap w-100 teamdatatable">
                     <thead>
                         <tr>
                             <th>SN</th>
+                            <th>Recorder</th>
                             <th>name</th>
                             <th>position</th>
                             <th>contact</th>
@@ -28,10 +29,11 @@
                         </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody id="tablecontents" class="teamtablecontents">
                         @foreach($getallmember as $key=>$teams)
-                        <tr>
+                        <tr class="row1" data-id="{{$teams->id}}">
                             <td>{{$key+1}}</td>
+                            <td class="pl-3"><i class="fa fa-sort"></i></td>
                             <td>{{$teams->name}}</td>
                             <td>{{$teams->position}}</td>
                             <td>{{$teams->contact}}</td>

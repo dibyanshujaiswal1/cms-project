@@ -25,7 +25,17 @@ class EventController extends Controller
 
         ]);
         $filename = $request->file('image');
-
+        list($width, $height) = getimagesize($request->file('image'));
+               
+        if ($width != 370 || $height != 280) {
+            $notification = [
+                'message' => 'Image size must be 370*280',
+                'alert-type' => 'error',
+            ];
+            return redirect()
+                ->back()
+                ->with($notification);
+        }
         $file = time() . '-' . 'profile' . '.' . $filename->getClientOriginalExtension();
         $destination = public_path('backend/img/event/');
         $filename->move($destination, $file);
@@ -54,6 +64,17 @@ class EventController extends Controller
     {
         $data = Event::find($id);
         if ($request->file('image')) {
+            list($width, $height) = getimagesize($request->file('image'));
+               
+            if ($width != 370 || $height != 280) {
+                $notification = [
+                    'message' => 'Image size must be 370*280',
+                    'alert-type' => 'error',
+                ];
+                return redirect()
+                    ->back()
+                    ->with($notification);
+            }
             $filename = $request->file('image');
             $file = time() . '-' . 'event' . '.' . $filename->getClientOriginalExtension();
             $destination = public_path('backend/img/event/');

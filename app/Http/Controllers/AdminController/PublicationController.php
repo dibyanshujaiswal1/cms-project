@@ -24,6 +24,17 @@ class PublicationController extends Controller
         $filename->move($destination, $file);
         
         $filenames = $request->file('thumbnail');
+        list($width, $height) = getimagesize($request->file('thumbnail'));
+               
+        if ($width != 370 || $height != 280) {
+            $notification = [
+                'message' => 'Image size must be 370*280',
+                'alert-type' => 'error',
+            ];
+            return redirect()
+                ->back()
+                ->with($notification);
+        }
         $files = time() . '-' . 'thumbnail' . '.' . $filenames->getClientOriginalExtension();
         $destinations = public_path('backend/img/publication/thumbnail/');
         $filenames->move($destinations, $files);
@@ -56,6 +67,7 @@ class PublicationController extends Controller
     {
         $data = Publication::find($id);
         if ($request->file('file')) {
+            
             $efilename = $request->file('file');
             $efile = time() . '-' . 'publication' . '.' . $efilename->getClientOriginalExtension();
             $destination = public_path('backend/img/publication/');
@@ -64,6 +76,17 @@ class PublicationController extends Controller
               
         }
         if($request->file('thumbnail')){
+            list($width, $height) = getimagesize($request->file('thumbnail'));
+               
+        if ($width != 370 || $height != 280) {
+            $notification = [
+                'message' => 'Image size must be 370*280',
+                'alert-type' => 'error',
+            ];
+            return redirect()
+                ->back()
+                ->with($notification);
+        }
             $ethumbfilename = $request->file('thumbnail');
             $ethumbfile = time() . '-' . 'thumnail' . '.' . $ethumbfilename->getClientOriginalExtension();
             $thumbdestination = public_path('backend/img/publication/thumbnail/');

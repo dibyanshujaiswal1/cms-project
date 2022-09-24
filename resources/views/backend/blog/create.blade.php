@@ -22,7 +22,7 @@
                             <div class="form-group row">
 
                                 <div class="col-sm-12">
-                                    <label for="image">Blog Image</label>
+                                    <label for="image">Blog Image <span class="text-danger">use 370*280 image size</span></label>
 
                                     <input type="file" class="form-control " id="exampleLastName" name="image">
                                     @error('image')

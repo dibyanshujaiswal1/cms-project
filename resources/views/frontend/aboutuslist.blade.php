@@ -52,7 +52,7 @@
                                                 <div class="column-content-inner">
                                                     @foreach($getaboutus as $abouts)
                                                     <div class="gsc-column col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                        <img src="{{asset('backend/img/aboutus/'.$abouts->image)}}" alt="" style="height:550px; width:100%" typeof="foaf:Image" class="mobile-view" />
+                                                        <img src="{{asset('backend/img/aboutus/'.$abouts->image)}}" alt="" style="height:450px; width:100%" typeof="foaf:Image" class="mobile-view" />
                                                     </div>
                                                     <div class="gsc-column col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
                                                         <h2 class="title"><span><strong>{{$abouts->heading}}</strong></span></h2>
