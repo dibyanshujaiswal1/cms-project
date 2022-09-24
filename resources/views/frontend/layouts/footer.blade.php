@@ -8,30 +8,19 @@ $getallcontact=Contact::first();
 @endphp
 <footer id="footer" class="footer">
     <div class="footer-inner">
-
-
         <div class="footer-center">
             <div class="container">
                 <div class="row">
                     <div class="footer-second col-lg-4 col-md-4 col-sm-12 col-xs-12 column">
                         <div>
                             <div id="block-gavias-kunco-linkfooter" class="block block-block-content block-block-contentf68ff84d-6af0-4c49-8b85-ae338addc541">
-
-
                                 <div class="content block-content">
-
-
                                     @if(!empty($getlogo->image))
                                     <img class="logo-default img-circle" src="{{asset('backend/img/logo/'.$getlogo->image)}}" alt="Home" style="height:167px; width:184px" />
                                     @endif
-
-
-
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                     <div class="footer-second col-lg-4 col-md-4 col-sm-12 col-xs-12 column">
                         <div>
@@ -51,12 +40,9 @@ $getallcontact=Contact::first();
                                             </ul>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                     <div class="footer-first col-lg-4 col-md-4 col-sm-12 col-xs-12 column">
                         <div>
@@ -77,7 +63,7 @@ $getallcontact=Contact::first();
 
                                                 <li><span><a href="{{$getallcontact->facebook}}"><i class="fa-brands fa-facebook"></i> {!! Str::limit($getallcontact->facebook,20)!!}</span> </a></li>
                                                 <li><span><i class="fa fa-mobile-phone"></i>{{$getallcontact->phone}}</span></li>
-                                                <li><a href="{{$getallcontact->email}}"><i class="fa fa-envelope-o"></i>{{$getallcontact->email}}</a> </li>
+                                                <li><i class="fa fa-envelope-o"></i>{{$getallcontact->email}}</li>
 
 
 
@@ -136,7 +122,8 @@ $getallcontact=Contact::first();
                             <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
 
                                 <div class="text-center">
-                                    © Copyright <a href="">Dhoreli Sewa Samaj</a> 2018. All Rights Reserved.
+                                    © Copyright <a href="">Dhoreli Sewa Samaj</a> 2022. All Rights Reserved.<br>
+                                    <span>Developed By <a href="https://dristicode.com/" style="color:#18ACD7;">Dristicode</a></span>
                                 </div>
                             </div>
                         </div>

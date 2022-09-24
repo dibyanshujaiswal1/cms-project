@@ -67,12 +67,12 @@
                                                                             </div>
                                                                             <div class="post-content text-left">
                                                                                 <div class="post-title"><span property="schema:name">
-                                                                                        <h4 class="text-center">{{$teams->name}}</h4>
+                                                                                        <h4 class="text-center" style="margin-top:-22px">{{$teams->name}}</h4>
                                                                                     </span>
                                                                                 </div>
                                                                                 <div class="post-meta">
                                                                                     <span class="">
-                                                                                        <h5 class="text-center">{{$teams->position}}</h5 class="text-center">
+                                                                                        <h5 class="text-center" style="margin-top:-18px">{{$teams->position}}</h5 class="text-center">
                                                                                     </span>
                                                                                 </div>
                                                                             </div>
@@ -83,8 +83,10 @@
                                                             @endif
                                                             @endforeach
                                                         </div>
+                                                        
                                                         <div class="views-row row clearfix row-1">
                                                             <div style="background-color: #cbd9d454;height: 48px;margin-bottom: 11px;">
+                                                            
                                                                 <h1 class="text-center" style="padding-top:6px">Ex Member</h1>
                                                             </div>
                                                             @foreach($getallmember as $teams)
@@ -98,12 +100,12 @@
                                                                             </div>
                                                                             <div class="post-content text-left">
                                                                                 <div class="post-title"><span property="schema:name">
-                                                                                        <h4 class="text-center">{{$teams->name}}</h4>
+                                                                                        <h4 class="text-center" style="margin-top:-22px">{{$teams->name}}</h4>
                                                                                     </span>
                                                                                 </div>
                                                                                 <div class="post-meta">
                                                                                     <span class="">
-                                                                                        <h5 class="text-center">{{$teams->position}}</h5 class="text-center">
+                                                                                        <h5 class="text-center" style="margin-top:-18px">{{$teams->position}}</h5 class="text-center">
                                                                                     </span>
                                                                                 </div>
                                                                             </div>
@@ -114,6 +116,7 @@
                                                             @endif
                                                             @endforeach
                                                         </div>
+                                                       
                                                     </div>
                                                 </div>
                                             </div>

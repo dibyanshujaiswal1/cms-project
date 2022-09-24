@@ -188,7 +188,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="post-content">
-                                                                            <div class="post-title"> <a href="{{route('view.blog',$blogs->id)}}" hreflang="en">{{$blogs->title}}</a> {{$blogsdetails->author_name}}</div>
+                                                                            <div class="post-title" style="margin-top:7px;"> <a href="{{route('view.blog',$blogs->id)}}" hreflang="en" >{{$blogs->title}}</a> {{$blogsdetails->author_name}}</div>
                                                                             
                                                                                 
                                                                             

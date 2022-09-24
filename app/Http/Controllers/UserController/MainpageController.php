@@ -30,7 +30,7 @@ class MainpageController extends Controller
         $getallblog=Blog::orderby('id','desc')->where('status',1)->get();
         $getallnews=News::orderby('id','desc')->get();    
         $getallevent=Event::orderby('id','desc')->limit(4)->get();
-        $getallmember=Team::get();
+        $getallmember=Team::orderby('id','desc')->get();
         $getallgallery=Gallery::get(); 
         $getallnews=News::orderby('id','desc')->get();
 

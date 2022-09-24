@@ -30,7 +30,7 @@
 
                                                         </li>
                                                         <li>
-                                                            Our Publication 
+                                                            Publication 
 
                                                         </li>
 

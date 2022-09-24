@@ -40,11 +40,11 @@
                                         @enderror
                                     
                                 </div>
-                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <label for="position">Contact</label>
-                                    <input type="text" class="form-control" name="contact" id="exampleInputEmail" placeholder="Member contact">
+                                <div class="col-sm-12 mb-3 mb-sm-0">
+                                    <label for="name">Contact</label>
+                                    <input type="text" class="form-control " name="contact" id="exampleFirstName" placeholder="Contact">
                                     @error('contact')
-                                    <span>{{$message}}</span>
+                                    <span style="color:red">{{$message}}</span>
                                     @enderror
                                 </div>
                                 <div class="col-sm-12">

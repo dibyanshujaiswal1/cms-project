@@ -55,7 +55,7 @@
                                                         <img src="{{asset('backend/img/aboutus/'.$abouts->image)}}" alt="" style="height:550px; width:100%" typeof="foaf:Image" class="mobile-view" />
                                                     </div>
                                                     <div class="gsc-column col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
-                                                        <h2 class="title"><span><strong>{{$abouts->heading}}</strong> in 125 Countries.</span></h2>
+                                                        <h2 class="title"><span><strong>{{$abouts->heading}}</strong></span></h2>
                                                         <div class="title-desc">
                                                             <p>{!!$abouts->description!!}</p>
                                                         </div>
