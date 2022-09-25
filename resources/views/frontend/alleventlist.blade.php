@@ -61,7 +61,7 @@
                                                                      <div class="post-image">
                                                                          <div class="field field--name-field-image field--type-image field--label-hidden field__item">
                                                                             <div class="item-image">
-                                                                                <a href="server-side-rendering.html"><img property="schema:image" src="{{asset('backend/img/event/'.$events->image)}}" style="height:260px; width:500px" alt="alt" typeof="foaf:Image" class="mobile-view"/>
+                                                                                <a href="server-side-rendering.html"><img property="schema:image" src="{{asset('backend/img/event/'.$events->image)}}" alt="alt" typeof="foaf:Image" class="mobile-view"/>
                                                                                 </a>
                                                                             </div>
                                                                         </div>

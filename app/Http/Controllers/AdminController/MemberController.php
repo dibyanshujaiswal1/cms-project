@@ -10,7 +10,8 @@ use Illuminate\Http\Request;
 class MemberController extends Controller
 {
     //
-    public function createmember(){
+    public function createmember()
+    {
         return view('backend.team.create');
     }
 
@@ -21,42 +22,63 @@ class MemberController extends Controller
             'position' => 'required',
             'contact' => 'required',
             'picture' => 'required',
-            'type'=>'required',
-            
+            'type' => 'required',
+
 
 
         ]);
         $filename = $request->file('picture');
+        list($width, $height) = getimagesize($request->file('picture'));
 
+        if ($width != 370 || $height != 280) {
+            $notification = [
+                'message' => 'Image size must be 370*280',
+                'alert-type' => 'error',
+            ];
+            return redirect()
+                ->back()
+                ->with($notification);
+        }
         $file = time() . '-' . 'profile' . '.' . $filename->getClientOriginalExtension();
         $destination = public_path('backend/img/members/');
         $filename->move($destination, $file);
 
         $var = Team::insert([
-            
+
             'name' => $request->name,
             'position' => $request->position,
             'contact' => $request->contact,
-            'type'=>$request->type,
+            'type' => $request->type,
             'picture' => $file,
 
         ]);
         return redirect()->back()->with('message', 'Member added sucessfully!!');
     }
-    public function memberlist(){
-        $getallmember=Team::orderby('id','desc')->get();
+    public function memberlist()
+    {
+        $getallmember = Team::orderby('id', 'desc')->get();
         return view('backend.team.view', compact('getallmember'));
-
     }
-    public function editmember($id){
-        $data=Team::find($id);
-        return view('backend.team.edit',['data'=>$data]);
-
+    public function editmember($id)
+    {
+        $data = Team::find($id);
+        return view('backend.team.edit', ['data' => $data]);
     }
     public function updatemember(Request $request, $id)
     {
         $data = Team::find($id);
         if ($request->file('picture')) {
+            list($width, $height) = getimagesize($request->file('picture'));
+
+            if ($width != 370 || $height != 280) {
+                $notification = [
+                    'message' => 'Image size must be 370*280',
+                    'alert-type' => 'error',
+                ];
+                return redirect()
+                    ->back()
+                    ->with($notification);
+            }
             $filename = $request->file('picture');
             $file = time() . '-' . 'members' . '.' . $filename->getClientOriginalExtension();
             $destination = public_path('backend/img/members/');
@@ -70,14 +92,26 @@ class MemberController extends Controller
         $data->save();
         return  redirect('memberlist');
     }
-    public function MemberDetails($id){
-        $memberdetails=Team::find($id);
-        return view('backend.team.details',compact('memberdetails'));
-        
+    public function MemberDetails($id)
+    {
+        $memberdetails = Team::find($id);
+        return view('backend.team.details', compact('memberdetails'));
     }
-    public function deletemember($id){
-        $data=Team::find($id);
+    public function deletemember($id)
+    {
+        $data = Team::find($id);
         $data->delete();
         return redirect('memberlist');
+    }
+    public function TeamRecorder(Request $request)
+    {
+        $team = Team::all();
+        foreach ($team as $team) {
+            foreach ($request->order as $order) {
+                if ($order['id'] == $team->id) {
+                    $team->update(['sort_id' => $order['position']]);
+                }
+            }
+        }
     }
 }

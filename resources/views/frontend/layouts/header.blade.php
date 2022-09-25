@@ -31,8 +31,6 @@ $getallcontact=Contact::first();
                                                     <li><a target="_blank" href="{{$getallmedia->facebook}}" style="color:white;"><i class="fa-brands fa-facebook"></i></a></li>
                                                     <li><a target="_blank" href="{{$getallmedia->instagram}}" style="color:white;"> <i class="fa-brands fa-instagram"></i></a></li>
                                                     <li><a target="_blank" href="{{$getallmedia->twitter}}" style="color:white;"><i class="fa-brands fa-twitter"></i></a></li>
-                                                    <li><a target="_blank" href="{{$getallmedia->skype}}" style="color:white;"><i class="fa-brands fa-skype"></i></a></li>
-                                                    <li><a target="_blank" href="{{$getallmedia->googleplus}}" style="color:white;"><i class="fa-brands fa-google-plus"></i></a></li>
                                                 </ul>
                                                 @endif
                                             </div>
@@ -55,7 +53,7 @@ $getallcontact=Contact::first();
         <div class="container header-content-layout">
             <div class="header-main-inner p-relative">
                 <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-md-12 col-sm-12 col-xs-12" style="height: 60px;">
                         <div class="branding">
                             <div>
                                 <a href="" title="Home" rel="home" class="site-branding-logo">
@@ -74,7 +72,7 @@ $getallcontact=Contact::first();
                                             <span class="two"></span>
                                             <span class="three"></span>
                                         </div>
-                                        <div class="gva-offcanvas-mobile" style="padding-top:12px">
+                                        <div class="gva-offcanvas-mobile" style="padding-top:0px">
                                             <div class="close-offcanvas hidden"><i class="gv-icon-8"></i>
                                             </div>
                                             <div class="main-menu-inner">

@@ -62,8 +62,7 @@
                                     @enderror
                                 </div>
                                 <div class="col-sm-12 mb-3 mb-sm-0">
-                                    <label for="thumbnail">Thumbnail</label>
-
+                                    <label for="thumbnail">Thumbnail <span class="text-danger">use 370*280 image size</span></label>
                                     <input type="file" class="form-control " name="thumbnail" id="exampleFirstName" placeholder="THumbnail">
                                     @error('thumbnail')
                                     <span style="color:red">{{$message}}</span>

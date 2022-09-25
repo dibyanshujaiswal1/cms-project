@@ -94,7 +94,7 @@
 
                                                                         <div class="field field--name-field-image field--type-image field--label-hidden field__item">
                                                                             <div class="item-image">
-                                                                                <a href="{{route('view.blog',$blogs->id)}}"><img property="schema:image" src="{{asset('backend/img/blog/'.$blogs->image)}}" style="height:260px; width:500px" alt="alt" typeof="foaf:Image" class="mobile-view" />
+                                                                                <a href="{{route('view.blog',$blogs->id)}}"><img property="schema:image" src="{{asset('backend/img/blog/'.$blogs->image)}}" alt="alt" typeof="foaf:Image" class="mobile-view" />
 
                                                                                 </a>
                                                                             </div>
@@ -104,14 +104,9 @@
                                                                     </div>
 
                                                                     <div class="post-content text-left">
-                                                                        <div class="post-title"> <a href="{{route('view.blog',$blogs->id)}}" rel="bookmark"><span property="schema:name">{{$blogs->title}}</span>
+                                                                        <div class="post-title"> <a href="{{route('view.blog',$blogs->id)}}" rel="bookmark"><span property="schema:name">{{$blogs->title}} by {{$blogs->author_name}}</span>
                                                                             </a> </div>
-                                                                        <div class="post-meta">
-                                                                            <span class="post-categories">
-                                                                                <div class="field field--name-field-post-category field--type-entity-reference field--label-hidden field__item"><a href="taxonomy/term/5.html" hreflang="en">{{$blogs->author_name}}</a></div>
-                                                                            </span>
-                                                                            <span class="post-created">21 December 2016 </span>
-                                                                        </div>
+                                                                        
                                                                         <div class="post-body">
 
                                                                             <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field__item">{!! Str::limit($blogs->description,)!!}</div>

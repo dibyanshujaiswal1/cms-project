@@ -14,14 +14,16 @@
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Add Blog</h1>
                         </div>
+                        @if(Session::has('message'))
+                        <p style="color:green;text-align:center">{{Session::get('message')}}</p>
+                        @endif
                         <form class="user" action="{{route('update.blog',$data->id)}}" method="post" enctype="multipart/form-data">
-
                             @csrf 
                             <div class="col-sm-12">
                             </div>
 
                             <div class="col-sm-12">
-                                    <label for="image">Blog Image</label>
+                                    <label for="image">Blog Image <span class="text-danger">use 370*280 image size</span></label>
 
                                     <input type="file" class="form-control " id="exampleLastName" name="image">
                                     <img src="{{asset('backend/img/blog/'.$data->image)}}" alt="" width="100" height="100">

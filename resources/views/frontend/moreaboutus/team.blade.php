@@ -63,7 +63,7 @@
                                                                     <div class="post-image">
                                                                         <div class="field field--name-field-image field--type-image field--label-hidden field__item">
                                                                             <div class="item-image">
-                                                                                <img src="{{asset('backend/img/members/'.$teams->picture)}}" alt="" typeof="foaf:Image" style="height:260px; width:500px" alt="alt" typeof="foaf:Image" />
+                                                                                <img src="{{asset('backend/img/members/'.$teams->picture)}}" alt="" typeof="foaf:Image" alt="alt" typeof="foaf:Image" />
                                                                             </div>
                                                                             <div class="post-content text-left">
                                                                                 <div class="post-title"><span property="schema:name">

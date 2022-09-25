@@ -33,13 +33,9 @@ class MainpageController extends Controller
         $getallmember=Team::orderby('id','desc')->get();
         $getallgallery=Gallery::get(); 
         $getallnews=News::orderby('id','desc')->get();
-
-        
-       
-
-       
-        // dd($getallbanner);
-        return view('frontend.layouts.mainpage', compact('getallbanner','getallblog','getallmember','getallgallery','getallnews', 'getallevent'));
+        $getaboutus=About::get();
+        $getourpublication=Publication::orderby('id','desc')->get();
+        return view('frontend.layouts.mainpage', compact('getallbanner','getallblog','getallmember','getallgallery','getallnews', 'getallevent','getaboutus','getourpublication'));
         
     }
     //

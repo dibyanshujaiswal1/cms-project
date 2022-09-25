@@ -24,7 +24,17 @@ class BlogController extends Controller
 
         ]);
         $filename = $request->file('image');
-
+        list($width, $height) = getimagesize($request->file('image'));
+               
+        if ($width != 370 || $height != 280) {
+            $notification = [
+                'message' => 'Image size must be 370*280',
+                'alert-type' => 'error',
+            ];
+            return redirect()
+                ->back()
+                ->with($notification);
+        }
         $file = time() . '-' . 'profile' . '.' . $filename->getClientOriginalExtension();
         $destination = public_path('backend/img/blog/');
         $filename->move($destination, $file);
@@ -54,6 +64,17 @@ class BlogController extends Controller
     {
         $data = Blog::find($id);
         if ($request->file('image')) {
+            list($width, $height) = getimagesize($request->file('image'));
+               
+            if ($width != 370 || $height != 280) {
+                $notification = [
+                    'message' => 'Image size must be 370*280',
+                    'alert-type' => 'error',
+                ];
+                return redirect()
+                    ->back()
+                    ->with($notification);
+            }
             $filename = $request->file('image');
             $file = time() . '-' . 'blog' . '.' . $filename->getClientOriginalExtension();
             $destination = public_path('backend/img/blog/');
@@ -64,7 +85,7 @@ class BlogController extends Controller
         $data->description = $request->description;
         $data->author_name = $request->author_name;
         $data->save();
-        return  redirect('bloglist');
+        return  redirect('bloglist')->with('message', 'Blog Updated sucessfully!!');
     }
     public function BlogDetails($id){
         $blogdetails=Blog::find($id);

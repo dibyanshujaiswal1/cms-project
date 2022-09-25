@@ -27,18 +27,10 @@
                                 </div>
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label for="status">Member Position</label>
-
-                                    <select class="form-control " name="position" id="exampleFirstName" placeholder="Select Member Position">
-                                    <option value="">Select Type</option>
-                                        <option value="chairperson">Our Chair Person</option>
-                                        <option value="generalsecurity">General Security</option>
-                                        <option value="lifetimemember">Life Time Member</option>
-                                        <option value="members">Member</option>
-                                    </select>
+                                    <input type="text" class="form-control " name="position" id="exampleFirstName" placeholder="Member position">
                                         @error('position')
                                         <span style="color:red">{{$message}}</span>
                                         @enderror
-                                    
                                 </div>
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label for="name">Contact</label>
@@ -48,7 +40,7 @@
                                     @enderror
                                 </div>
                                 <div class="col-sm-12">
-                                    <label for="image">Picture</label>
+                                    <label for="image">Picture <span class="text-danger">use 370*280 image size</span></label>
 
                                     <input type="file" class="form-control " id="exampleLastName" name="picture">
                                     @error('picture')

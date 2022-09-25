@@ -85,14 +85,11 @@ $getallcontact=Contact::first();
             </div>
         </div>
     </div>
-
     <div class="copyright">
         <div class="container">
             <div class="copyright-inner">
                 <div>
                     <div id="block-gavias-kunco-socialscopyright" class="block block-block-content block-block-content76c2a6c0-9cc3-4d4e-b6ca-c9d1ea59ce70 no-title">
-
-
                         <div class="content block-content">
 
                             <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
@@ -103,8 +100,6 @@ $getallcontact=Contact::first();
                                         <a href="{{$getallmedia->facebook}}"><i class="fa-brands fa-facebook"></i></a>
                                         <a href="{{$getallmedia->instagram}}"><i class="fa-brands fa-instagram"></i></i></a>
                                         <a href="{{$getallmedia->twitter}}"><i class="fa-brands fa-twitter"></i></i></a>
-                                        <a href="{{$getallmedia->skype}}"><i class="fa-brands fa-skype"></i></i></a>
-                                        <a href="{{$getallmedia->googleplus}}"><i class="fa-brands fa-google-plus"></i></i></a>
                                         @endif
                                     </div>
 
