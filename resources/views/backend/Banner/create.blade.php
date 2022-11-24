@@ -31,7 +31,7 @@
                   @enderror
                 </div>
                 <div class="col-sm-12">
-                  <label for="image">Banner Image</label>
+                  <label for="image">Banner Image <span class="text-danger">use 1170*550 image size</span></label>
 
                   <input type="file" class="form-control " id="exampleLastName" name="image">
                   @error('image')

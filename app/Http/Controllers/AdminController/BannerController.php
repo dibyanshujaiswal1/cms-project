@@ -29,6 +29,17 @@ class BannerController extends Controller
 
         ]);
         $filename = $request->file('image');
+        list($width, $height) = getimagesize($request->file('image'));
+               
+        if ($width != 1170 || $height != 550) {
+            $notification = [
+                'message' => 'Image size must be 1170*550',
+                'alert-type' => 'error',
+            ];
+            return redirect()
+                ->back()
+                ->with($notification);
+        }
 
         $file = time() . '-' . 'profile' . '.' . $filename->getClientOriginalExtension();
         $destination = public_path('backend/img/banner/');
@@ -53,6 +64,17 @@ class BannerController extends Controller
     {
         $data = Banner::find($id);
         if ($request->file('image')) {
+            list($width, $height) = getimagesize($request->file('image'));
+               
+            if ($width != 1170 || $height != 550) {
+                $notification = [
+                    'message' => 'Image size must be 1170*550',
+                    'alert-type' => 'error',
+                ];
+                return redirect()
+                    ->back()
+                    ->with($notification);
+            }
             $filename = $request->file('image');
             $file = time() . '-' . 'banner' . '.' . $filename->getClientOriginalExtension();
             $destination = public_path('backend/img/banner/');
