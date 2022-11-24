@@ -46,19 +46,16 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <label for="picture">Member picture <span class="text-danger">use 370*280 image size</span></label>
-
                                     <input type="file" class="form-control " id="exampleLastName" name="picture">
                                     <img src="{{asset('backend/img/members/'.$data->picture)}}" alt="" width="100" height="100" value="{{$data->picture}}">
                                 </div>
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label for="status">Member Type</label>
-
                                     <select class="form-control " name="type" id="exampleFirstName" placeholder="Select Type" >
                                         <option value="actiing-member" {{$data->type=="actiing-member"?'selected':''}} >Acting Member</option>
                                         <option value="ex-member" {{$data->type=="ex-member"?'selected':''}} >Ex-Membere</option>
                                     </select>
                                 </div>
-
                             </div>
                            
                     </div>

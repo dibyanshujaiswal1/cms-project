@@ -14,9 +14,12 @@
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Add Banner</h1>
                         </div>
+                        @if(Session::has('message'))
+                        <p style="color:green;text-align:center">{{Session::get('message')}}</p>
+                        @endif
                         <form class="user" action="{{route('update.banner',$data->id)}}" method="post" enctype="multipart/form-data">
 
-                            @csrf 
+                            @csrf
                             <div class="col-sm-12">
                             </div>
 
@@ -27,7 +30,7 @@
                                     <input type="text" class="form-control " name="banner_heading" id="exampleFirstName" value="{{$data->banner_heading}}">
                                 </div>
                                 <div class="col-sm-12">
-                                    <label for="image">Banner Image</label>
+                                    <label for="image">Banner Image <span class="text-danger">use 1170*550 image size</span></label>
 
                                     <input type="file" class="form-control " id="exampleLastName" name="image">
                                     <img src="{{asset('backend/img/banner/'.$data->image)}}" alt="" width="100" height="100">
